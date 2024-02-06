@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="view_event_dasboard_kanban" model="ir.ui.view">
+	        <field name="name">event.dashboard.view</field>
+	        <field name="model">event.dashboard</field>
+	        <field name="arch" type="xml">
+	        	<kanban class="o_kanban_dashboard" create="0">
+	        		<templates>
+	        			<t t-name="kanban-box" string="HR"> 
+				            <table class="oe_kanban_groups">
+				                <tr style="width:100px;">
+				                    <td>
+				                        <span t-attf-class="#{kanban_color(661)} oe_kanban_card ">
+				                        	<div class="o_project_kanban_main" style="font-size:20px;width:325px;height:150px">
+				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
+							                    	<center>
+							                        	<table>
+							                        		<center>
+								                            	<tr>
+								                                	<b><span style="font-size:23px;">THIRUVANANTHAPURAM</span></b>
+								                            	</tr>
+								                            </center>
+							                            	<tr>
+								                                <div >
+								                                	<left>
+								                                    	<button class="your_custom_button" type="object" name="call_place" string="View">View</button>
+								                                	</left>
+								                                </div>
+								                            </tr>
+							                        	</table>
+							                    	</center>
+							                	</div>
+					                        </div>
+					             		</span>
+					         		</td>
+					         		<td>
+				                        <span t-attf-class="#{kanban_color(662)} oe_kanban_card ">
+				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
+				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
+							                    	<center>
+							                        	<table>
+							                            	<tr>
+							                            		<center>
+							                                		<b><span style="font-size:20px;">KOLLAM</span></b>
+							                              		</center>
+							                            	</tr>
+							                            	<tr>
+								                                <div>
+								                                	<left>
+								                                    	<button class="your_custom_button" type="object" name="call_kollam" string="View">View</button>
+								                                	</left>
+								                                </div>
+								                            </tr>
+							                        	</table>
+							                    	</center>
+							                	</div>
+					                        </div>
+					             		</span>
+					         		</td>
+									<td>
+				                        <span t-attf-class="#{kanban_color(664)} oe_kanban_card ">
+				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
+				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
+							                    	<center>
+							                        	<table>
+							                            	<tr>
+							                            		<center>
+							                                		<b><span style="font-size:20px;">PATHANAMTHITTA</span></b>
+							                              		</center>
+							                            	</tr>
+							                            	<tr>
+								                                <div >
+								                                	<left>
+								                                    	<button class="your_custom_button" type="object" name="call_pta" string="View">View</button>
+								                                	</left>
+								                                </div>
+								                            </tr>
+							                        	</table>
+							                    	</center>
+							                	</div>
+					                        </div>
+					             		</span>
+					         		</td>
+
+					         		<td>
+				                        <span t-attf-class="#{kanban_color(663)} oe_kanban_card ">
+				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
+				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
+							                    	<center>
+							                        	<table>
+							                            	<tr>
+							                            		<center>
+							                                		<b><span style="font-size:20px;">AALAPPUZHA</span></b>
+							                              		</center>
+							                            	</tr>
+							                            	<tr>
+								                                <div >
+								                                	<left>
+								                                    	<button class="your_custom_button" type="object" name="call_al" string="View">View</button>
+								                                	</left>
+								                                </div>
+								                            </tr>
+							                        	</table>
+							                    	</center>
+							                	</div>
+					                        </div>
+					             		</span>
+					         		</td>
+
+
+					         		<td>
+				                        <span t-attf-class="#{kanban_color(665)} oe_kanban_card ">
+				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
+				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
+							                    	<center>
+							                        	<table>
+							                            	<tr>
+							                            		<center>
+							                                		<b><span style="font-size:20px;">KOTTAYAM</span></b>
+							                              		</center>
+							                            	</tr>
+							                            	<tr>
+								                                <div>
+								                                	<left>
+								                                    	<button class="your_custom_button" type="object" name="call_kt" string="View">View</button>
+								                                	</left>
+								                                </div>
+								                            </tr>
+							                        	</table>
+							                    	</center>
+							                	</div>
+					                        </div>
+					             		</span>
+					         		</td>
+								</tr>
+
+					         	<tr style="width:120px;">
+					         		<td>
+				                        <span t-attf-class="#{kanban_color(667)} oe_kanban_card ">
+				                        	<div class="o_project_kanban_main" style="font-size:20px;width:325px;height:150px">
+				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
+							                    	<center>
+							                        	<table>
+							                            	<tr>
+							                            		<center>
+							                                		<b><span style="font-size:20px;">IDUKKI</span></b>
+							                              		</center>
+							                            	</tr>
+							                            	<tr>
+								                                <div >
+								                                	<left>
+								                                    	<button class="your_custom_button" type="object" name="call_id" string="View">View</button>
+								                                	</left>
+								                                </div>
+								                            </tr>
+							                        	</table>
+							                    	</center>
+							                	</div>
+					                        </div>
+					             		</span>
+					         		</td>
+					     			<td>
+				                        <span t-attf-class="#{kanban_color(668)} oe_kanban_card ">
+				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
+				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
+							                    	<center>
+							                        	<table>
+							                            	<tr>
+							                            		<center>
+							                                		<b><span style="font-size:20px;">ERNAKULAM</span></b>
+							                              		</center>
+							                            	</tr>
+							                            	<tr>
+								                                <div >
+								                                	<left>
+								                                    	<button class="your_custom_button" type="object" name="call_er" string="View">View</button>
+								                                	</left>
+								                                </div>
+								                            </tr>
+							                        	</table>
+							                    	</center>
+							                	</div>
+					                        </div>
+					             		</span>
+					         		</td>
+					         		<td>
+				                        <span t-attf-class="#{kanban_color(669)} oe_kanban_card ">
+				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
+				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
+							                    	<center>
+							                        	<table>
+							                            	<tr>
+							                            		<center>
+							                                		<b><span style="font-size:20px;">THRISSUR</span></b>
+							                              		</center>
+							                            	</tr>
+							                            	<tr>
+								                                <div >
+								                                	<left>
+								                                    	<button class="your_custom_button" type="object" name="call_ts" string="View">View</button>
+								                                	</left>
+								                                </div>
+								                            </tr>
+							                        	</table>
+							                    	</center>
+							                	</div>
+					                        </div>
+					             		</span>
+					         		</td>
+					         		<td>
+				                        <span t-attf-class="#{kanban_color(670)} oe_kanban_card ">
+				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
+				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
+							                    	<center>
+							                        	<table>
+							                            	<tr>
+							                            		<center>
+							                                		<b><span style="font-size:20px;">PALAKKAD</span></b>
+							                              		</center>
+							                            	</tr>
+							                            	<tr>
+								                                <div >
+								                                	<left>
+								                                    	<button class="your_custom_button" type="object" name="call_pl" string="View">View</button>
+								                                	</left>
+								                                </div>
+								                            </tr>
+							                        	</table>
+							                    	</center>
+							                	</div>
+					                        </div>
+					             		</span>
+					         		</td>
+					     			<td>
+				                        <span t-attf-class="#{kanban_color(676)} oe_kanban_card ">
+				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
+				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
+							                    	<center>
+							                        	<table>
+							                            	<tr>
+							                            		<center>
+							                                		<b><span style="font-size:20px;">MALAPPURAM</span></b>
+							                              		</center>
+							                            	</tr>
+							                            	<tr>
+								                                <div >
+								                                	<left>
+								                                    	<button class="your_custom_button" type="object" name="call_ma" string="View">View</button>
+								                                	</left>
+								                                </div>
+								                            </tr>
+							                        	</table>
+							                    	</center>
+							                	</div>
+					                        </div>
+					             		</span>
+					         		</td>
+								</tr>
+
+					     		<tr style="width:120px;">
+					         		<td>
+				                        <span t-attf-class="#{kanban_color(672)} oe_kanban_card ">
+				                        	<div class="o_project_kanban_main" style="font-size:20px;width:325px;height:150px">
+				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
+							                    	<center>
+							                        	<table>
+							                            	<tr>
+							                            		<center>
+							                                		<b><span style="font-size:20px;">KOZHIKODE</span></b>
+							                              		</center>
+							                            	</tr>
+							                            	<tr>
+								                                <div >
+								                                	<left>
+								                                    	<button class="your_custom_button" type="object" name="call_kz" string="View">View</button>
+								                                	</left>
+								                                </div>
+								                            </tr>
+							                        	</table>
+							                    	</center>
+							                	</div>
+					                        </div>
+					             		</span>
+					         		</td>
+					         		<td>
+				                        <span t-attf-class="#{kanban_color(673)} oe_kanban_card ">
+				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
+				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
+							                    	<center>
+							                        	<table>
+							                            	<tr>
+							                            		<center>
+							                                		<b><span style="font-size:20px;">WAYANAD</span></b>
+							                              		</center>
+							                            	</tr>
+							                            	<tr>
+								                                <div >
+								                                	<left>
+								                                    	<button class="your_custom_button" type="object" name="call_wa" string="View">View</button>
+								                                	</left>
+								                                </div>
+								                            </tr>
+							                        	</table>
+							                    	</center>
+							                	</div>
+					                        </div>
+					             		</span>
+					         		</td>
+					     			<td>
+				                        <span t-attf-class="#{kanban_color(674)} oe_kanban_card ">
+				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
+				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
+							                    	<center>
+							                        	<table>
+							                            	<tr>
+							                            		<center>
+							                                		<b><span style="font-size:20px;">KANNUR</span></b>
+							                              		</center>
+							                            	</tr>
+							                            	<tr>
+								                                <div >
+								                                	<left>
+								                                    	<button class="your_custom_button" type="object" name="call_kn" string="View">View</button>
+								                                	</left>
+								                                </div>
+								                            </tr>
+							                        	</table>
+							                    	</center>
+							                	</div>
+					                        </div>
+					             		</span>
+					         		</td>
+					         		<td>
+				                        <span t-attf-class="#{kanban_color(675)} oe_kanban_card ">
+				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
+				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
+							                    	<center>
+							                        	<table>
+							                            	<tr>
+							                            		<center>
+							                                		<b><span style="font-size:20px;">KASARAGOD</span></b>
+							                              		</center>
+							                            	</tr>
+							                            	<tr>
+								                                <div >
+								                                	<left>
+								                                    	<button class="your_custom_button" type="object" name="call_ks" string="View">View</button>
+								                                	</left>
+								                                </div>
+								                            </tr>
+							                        	</table>
+							                    	</center>
+							                	</div>
+					                        </div>
+					             		</span>
+					         		</td>
+									<td>
+				                        <span t-attf-class="#{kanban_color(675)} oe_kanban_card ">
+				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
+				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
+							                    	<center>
+							                        	<table>
+							                            	<tr>
+							                            		<center>
+							                                		<b><span style="font-size:20px;">Administrator</span></b>
+							                              		</center>
+							                            	</tr>
+							                            	<tr>
+								                                <div >
+								                                	<left>
+								                                    	<button class="your_custom_button" type="object" name="call_admin" string="View">View</button>
+								                                	</left>
+								                                </div>
+								                            </tr>
+							                        	</table>
+							                    	</center>
+							                	</div>
+					                        </div>
+					             		</span>
+					         		</td>
+					     		</tr>
+						 	</table>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+
+		<record id="event_dashboard_form_view" model="ir.ui.view">
+			<field name="name">event.dashboard.form.view</field>
+			<field name="model">event.dashboard</field>
+			<field name="arch" type="xml">
+				<form>
+					<group>
+						<field name="color"/>
+						<field name="name"/>
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_dashboard" model="ir.actions.act_window">
+		    <field name="name">Sri Sathya Sai Org Kerala </field>
+		    <field name="res_model">event.dashboard</field>
+		    <field name="type">ir.actions.act_window</field>
+		    <field name="view_type">form</field>
+		    <field name="context">{}</field>
+		    <field name="view_mode">kanban,form</field>
+		</record>
+
+		<menuitem id="menu_home"  name="Home" sequence="1" />
+        <menuitem id="submenu_home" parent="menu_home" name="Sathya Sai Events" sequence="1" />
+        <menuitem id="sub_submenu_dashboard" parent="submenu_home" name="Sathya Sai Events" sequence="1" action="action_dashboard"/>
+	</data>
+</openerp>

@@ -1,0 +1,126 @@
+from openerp import fields, models, api
+from datetime import date
+from datetime import  datetime,timedelta
+
+class HRDashboard(models.Model):
+    _name = 'event.dashboard'
+
+    color = fields.Integer(string='Color Index')
+    name = fields.Char(string="Name")
+
+    def call_place(self,cr,uid,ids,context):
+    	mod_obj = self.pool.get('ir.model.data')
+    	act_obj = self.pool.get('ir.actions.act_window')
+    	result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places')
+    	id = result and result[1] or False
+    	result = act_obj.read(cr, uid, [id], context=context)[0]
+    	return result
+
+
+    def call_pta(self,cr,uid,ids,context):
+        mod_obj = self.pool.get('ir.model.data')
+        act_obj = self.pool.get('ir.actions.act_window')
+        result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_pta')
+        id = result and result[1] or False
+        result = act_obj.read(cr, uid, [id], context=context)[0]
+        return result
+
+
+    def call_kollam(self,cr,uid,ids,context):
+        mod_obj = self.pool.get('ir.model.data')
+        act_obj = self.pool.get('ir.actions.act_window')
+        result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_kl')
+        id = result and result[1] or False
+        result = act_obj.read(cr, uid, [id], context=context)[0]
+        return result
+
+    def call_al(self,cr,uid,ids,context):
+        mod_obj = self.pool.get('ir.model.data')
+        act_obj = self.pool.get('ir.actions.act_window')
+        result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_al')
+        id = result and result[1] or False
+        result = act_obj.read(cr, uid, [id], context=context)[0]
+        return result
+
+    def call_er(self,cr,uid,ids,context):
+        mod_obj = self.pool.get('ir.model.data')
+        act_obj = self.pool.get('ir.actions.act_window')
+        result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_er')
+        id = result and result[1] or False
+        result = act_obj.read(cr, uid, [id], context=context)[0]
+        return result
+
+    def call_id(self,cr,uid,ids,context):
+        mod_obj = self.pool.get('ir.model.data')
+        act_obj = self.pool.get('ir.actions.act_window')
+        result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_id')
+        id = result and result[1] or False
+        result = act_obj.read(cr, uid, [id], context=context)[0]
+        return result
+
+    def call_ks(self,cr,uid,ids,context):
+        mod_obj = self.pool.get('ir.model.data')
+        act_obj = self.pool.get('ir.actions.act_window')
+        result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_ks')
+        id = result and result[1] or False
+        result = act_obj.read(cr, uid, [id], context=context)[0]
+        return result
+
+    def call_kt(self,cr,uid,ids,context):
+        mod_obj = self.pool.get('ir.model.data')
+        act_obj = self.pool.get('ir.actions.act_window')
+        result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_kt')
+        id = result and result[1] or False
+        result = act_obj.read(cr, uid, [id], context=context)[0]
+        return result
+
+    def call_kz(self,cr,uid,ids,context):
+        mod_obj = self.pool.get('ir.model.data')
+        act_obj = self.pool.get('ir.actions.act_window')
+        result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_kz')
+        id = result and result[1] or False
+        result = act_obj.read(cr, uid, [id], context=context)[0]
+        return result
+
+    def call_ma(self,cr,uid,ids,context):
+        mod_obj = self.pool.get('ir.model.data')
+        act_obj = self.pool.get('ir.actions.act_window')
+        result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_ma')
+        id = result and result[1] or False
+        result = act_obj.read(cr, uid, [id], context=context)[0]
+        return result
+
+    def call_pl(self,cr,uid,ids,context):
+        mod_obj = self.pool.get('ir.model.data')
+        act_obj = self.pool.get('ir.actions.act_window')
+        result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_pl')
+        id = result and result[1] or False
+        result = act_obj.read(cr, uid, [id], context=context)[0]
+        return result
+
+    def call_ts(self,cr,uid,ids,context):
+        mod_obj = self.pool.get('ir.model.data')
+        act_obj = self.pool.get('ir.actions.act_window')
+        result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_ts')
+        id = result and result[1] or False
+        result = act_obj.read(cr, uid, [id], context=context)[0]
+        return result
+
+    def call_wa(self,cr,uid,ids,context):
+        mod_obj = self.pool.get('ir.model.data')
+        act_obj = self.pool.get('ir.actions.act_window')
+        result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_wa')
+        id = result and result[1] or False
+        result = act_obj.read(cr, uid, [id], context=context)[0]
+        return result
+    
+    def call_kn(self,cr,uid,ids,context):
+        mod_obj = self.pool.get('ir.model.data')
+        act_obj = self.pool.get('ir.actions.act_window')
+        result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_kn')
+        id = result and result[1] or False
+        result = act_obj.read(cr, uid, [id], context=context)[0]
+        return result
+
+    def call_admin(self,cr,uid,ids,context):
+        return
