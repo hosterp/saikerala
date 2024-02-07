@@ -57,6 +57,8 @@ class Event(models.Model):
                                   string="Attachment",
                                   help='You can attach the copy of your document', copy=False)
     contact_details=fields.Char()
+    date_from=fields.Date('Date From')
+    date_to=fields.Date('Date To')
 
     @api.onchange('event_district')
     def onchange_event_district(self):

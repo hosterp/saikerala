@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="report_wizard_id">
+			<field name="name">Report</field>
+			<field name="model">event.event</field>
+			<field name="arch" type="xml">
+				<form string="Supplier Invoice History">
+					<group>
+<!--						<group>-->
+<!--							<field name="partner_id" domain="[('supplier','=',True)]" />-->
+<!--							<field name="financial_year"/>-->
+<!--						</group>-->
+						<group>
+							<field name="date_from"/>
+							<field name="date_to"/>
+						</group>
+					</group>
+					<group>
+						  <field name="event_category" />
+					</group>
+					<footer>
+						<button  type="object" string="Print" class="oe_highlight" />
+						<button string="Cancel" class="oe_link" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>
+
+        <record id="action_activity_report" model="ir.actions.act_window">
+            <field name="name">Activity Report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">event.event</field>
+            <field name="target">new</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+              <field name="view_id" ref="report_wizard_id"/>
+        </record>
+
+
+        <menuitem id="menu_activity_report" name="Report" sequence="99"/>
+        <menuitem id="submenu_activity_report" parent="menu_activity_report" name="Activity Report" sequence="99"/>
+        <menuitem id="sub_activity_report" parent="submenu_activity_report" name="Reports" sequence="99" action="action_activity_report"/>
+    </data>
+</openerp>
