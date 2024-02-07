@@ -201,6 +201,7 @@
 <!--                                <field name="event_category" widget="radio"/>-->
                                 <field name="event_category" widget="radio"/>
                                 <field name="event_type"/>
+                                <field name="contact_details" string="Phone Number"/>
                             </group>
                             <group>
                                  <field name="attachment" widget="many2many_binary" string="Attachment(s)"/>

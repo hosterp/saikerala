@@ -56,6 +56,7 @@ class Event(models.Model):
     attachment = fields.Many2many('ir.attachment', 'attach_rel', 'doc_id', 'attach_id3',
                                   string="Attachment",
                                   help='You can attach the copy of your document', copy=False)
+    contact_details=fields.Char()
 
     @api.onchange('event_district')
     def onchange_event_district(self):

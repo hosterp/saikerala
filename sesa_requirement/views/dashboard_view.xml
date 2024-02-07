@@ -8,23 +8,23 @@
 	        	<kanban class="o_kanban_dashboard" create="0">
 	        		<templates>
 	        			<t t-name="kanban-box" string="HR"> 
-				            <table class="oe_kanban_groups">
+				            <table class="oe_kanban_groups" style="min-height: 100px;">
 				                <tr style="width:100px;">
 				                    <td>
 				                        <span t-attf-class="#{kanban_color(661)} oe_kanban_card ">
-				                        	<div class="o_project_kanban_main" style="font-size:20px;width:325px;height:150px">
+				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
 				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
 							                    	<center>
 							                        	<table>
 							                        		<center>
 								                            	<tr>
-								                                	<b><span style="font-size:23px;">THIRUVANANTHAPURAM</span></b>
+								                                	<b><span style="font-size: 16px;text-align: center;margin: 0px -36px 0px -37px;">THIRUVANANTHAPURAM</span></b>
 								                            	</tr>
 								                            </center>
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" name="call_place" string="View">View</button>
+								                                    	<button class="your_custom_button" style="margin:38px;" type="object" name="call_place" string="View">View</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -42,13 +42,13 @@
 							                        	<table>
 							                            	<tr>
 							                            		<center>
-							                                		<b><span style="font-size:20px;">KOLLAM</span></b>
+							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 22px 0px 26px;">KOLLAM</span></b>
 							                              		</center>
 							                            	</tr>
 							                            	<tr>
 								                                <div>
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" name="call_kollam" string="View">View</button>
+								                                    	<button class="your_custom_button" type="object" style="margin:38px;" name="call_kollam" string="View">View</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -66,13 +66,13 @@
 							                        	<table>
 							                            	<tr>
 							                            		<center>
-							                                		<b><span style="font-size:20px;">PATHANAMTHITTA</span></b>
+							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px -7px;">PATHANAMTHITTA</span></b>
 							                              		</center>
 							                            	</tr>
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" name="call_pta" string="View">View</button>
+								                                    	<button class="your_custom_button" type="object" style="margin:38px;" name="call_pta" string="View">View</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -91,13 +91,13 @@
 							                        	<table>
 							                            	<tr>
 							                            		<center>
-							                                		<b><span style="font-size:20px;">AALAPPUZHA</span></b>
+							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 10px;">ALAPPUZHA</span></b>
 							                              		</center>
 							                            	</tr>
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" name="call_al" string="View">View</button>
+								                                    	<button class="your_custom_button" type="object"  style="margin:38px;" name="call_al" string="View">View</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -117,13 +117,13 @@
 							                        	<table>
 							                            	<tr>
 							                            		<center>
-							                                		<b><span style="font-size:20px;">KOTTAYAM</span></b>
+							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 20px;">KOTTAYAM</span></b>
 							                              		</center>
 							                            	</tr>
 							                            	<tr>
 								                                <div>
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" name="call_kt" string="View">View</button>
+								                                    	<button class="your_custom_button" type="object" style="margin:38px;" name="call_kt" string="View">View</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -144,13 +144,13 @@
 							                        	<table>
 							                            	<tr>
 							                            		<center>
-							                                		<b><span style="font-size:20px;">IDUKKI</span></b>
+							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 4px;">IDUKKI</span></b>
 							                              		</center>
 							                            	</tr>
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" name="call_id" string="View">View</button>
+								                                    	<button class="your_custom_button" type="object" style="margin:38px;" name="call_id" string="View">View</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -168,13 +168,13 @@
 							                        	<table>
 							                            	<tr>
 							                            		<center>
-							                                		<b><span style="font-size:20px;">ERNAKULAM</span></b>
+							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 10px;">ERNAKULAM</span></b>
 							                              		</center>
 							                            	</tr>
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" name="call_er" string="View">View</button>
+								                                    	<button class="your_custom_button" type="object" style="margin:38px;" name="call_er" string="View">View</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -192,13 +192,13 @@
 							                        	<table>
 							                            	<tr>
 							                            		<center>
-							                                		<b><span style="font-size:20px;">THRISSUR</span></b>
+							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 22px;">THRISSUR</span></b>
 							                              		</center>
 							                            	</tr>
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" name="call_ts" string="View">View</button>
+								                                    	<button class="your_custom_button" type="object" style="margin:38px;" name="call_ts" string="View">View</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -216,13 +216,13 @@
 							                        	<table>
 							                            	<tr>
 							                            		<center>
-							                                		<b><span style="font-size:20px;">PALAKKAD</span></b>
+							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 20px;">PALAKKAD</span></b>
 							                              		</center>
 							                            	</tr>
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" name="call_pl" string="View">View</button>
+								                                    	<button class="your_custom_button" type="object" style="margin:38px;" name="call_pl" string="View">View</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -240,13 +240,13 @@
 							                        	<table>
 							                            	<tr>
 							                            		<center>
-							                                		<b><span style="font-size:20px;">MALAPPURAM</span></b>
+							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 7px;">MALAPPURAM</span></b>
 							                              		</center>
 							                            	</tr>
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" name="call_ma" string="View">View</button>
+								                                    	<button class="your_custom_button" type="object" style="margin:38px;" name="call_ma" string="View">View</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -267,13 +267,13 @@
 							                        	<table>
 							                            	<tr>
 							                            		<center>
-							                                		<b><span style="font-size:20px;">KOZHIKODE</span></b>
+							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 11px;">KOZHIKODE</span></b>
 							                              		</center>
 							                            	</tr>
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" name="call_kz" string="View">View</button>
+								                                    	<button class="your_custom_button" type="object" style="margin:38px;" name="call_kz" string="View">View</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -291,13 +291,13 @@
 							                        	<table>
 							                            	<tr>
 							                            		<center>
-							                                		<b><span style="font-size:20px;">WAYANAD</span></b>
+							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 10px;">WAYANAD</span></b>
 							                              		</center>
 							                            	</tr>
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" name="call_wa" string="View">View</button>
+								                                    	<button class="your_custom_button" type="object" style="margin:38px;" name="call_wa" string="View">View</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -315,13 +315,13 @@
 							                        	<table>
 							                            	<tr>
 							                            		<center>
-							                                		<b><span style="font-size:20px;">KANNUR</span></b>
+							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 10px;">KANNUR</span></b>
 							                              		</center>
 							                            	</tr>
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" name="call_kn" string="View">View</button>
+								                                    	<button class="your_custom_button" type="object" style="margin:38px;" name="call_kn" string="View">View</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -339,13 +339,13 @@
 							                        	<table>
 							                            	<tr>
 							                            		<center>
-							                                		<b><span style="font-size:20px;">KASARAGOD</span></b>
+							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 12px;">KASARAGOD</span></b>
 							                              		</center>
 							                            	</tr>
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" name="call_ks" string="View">View</button>
+								                                    	<button class="your_custom_button" type="object" style="margin:38px;" name="call_ks" string="View">View</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -363,13 +363,13 @@
 							                        	<table>
 							                            	<tr>
 							                            		<center>
-							                                		<b><span style="font-size:20px;">Administrator</span></b>
+							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 12px;">Administrator</span></b>
 							                              		</center>
 							                            	</tr>
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" name="call_admin" string="View">View</button>
+								                                    	<button class="your_custom_button" type="object" style="margin:38px;" name="call_admin" string="View">View</button>
 								                                	</left>
 								                                </div>
 								                            </tr>

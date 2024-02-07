@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+        <template id="assets_backend" name="sesa_requirement assets" inherit_id="web.assets_backend">
+
+	<xpath expr="." position="inside">
+
+		<link rel="stylesheet" href="/sesa_requirement/static/src/css/styles.css"/>
+
+        </xpath>
+
+</template>
+    </data>
+</openerp>
