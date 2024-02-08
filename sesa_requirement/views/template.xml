@@ -7,6 +7,7 @@
 	<xpath expr="." position="inside">
 
 		<link rel="stylesheet" href="/sesa_requirement/static/src/css/styles.css"/>
+        <script type="text/javascript" src="/sesa_requirement/static/src/js/custom_webclient.js"></script>
 
         </xpath>
 

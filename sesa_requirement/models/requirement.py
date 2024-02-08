@@ -60,6 +60,25 @@ class Event(models.Model):
     date_from=fields.Date('Date From')
     date_to=fields.Date('Date To')
 
+    @api.multi
+    def print_activity_report(self):
+        datas = {
+            'ids': self._ids,
+            'model': self._name,
+            'form': self.read(),
+            'context': self._context,
+        }
+        data = self.env['ir.actions.report.xml'].search(
+            [('model', '=', 'event.event'), ('report_name', '=', 'sesa_requirement.activity_report_template',)])
+        if data.download_filename:
+            data.download_filename = ''
+        return {
+            'type': 'ir.actions.report.xml',
+            'report_name': 'sesa_requirement.activity_report_template',
+            'datas': datas,
+            'report_type': 'qweb-html',
+        }
+
     @api.onchange('event_district')
     def onchange_event_district(self):
         for record in self:
