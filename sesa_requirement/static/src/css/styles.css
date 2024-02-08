@@ -22,3 +22,6 @@
 .openerp .oe_kanban_view .oe_kanban_color_1 {
     background-color: beige;
 }
+ .center-align {
+        text-align: center;
+    }
