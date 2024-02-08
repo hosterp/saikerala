@@ -22,7 +22,7 @@ class Event(models.Model):
 
     # event = fields.Char("Event")
     desc = fields.Text("Details")
-    date = fields.Date("Date of event")
+    date = fields.Datetime("Date of event")
     # event_place = fields.Char("Place")
     state = fields.Selection([('draft', 'Draft'), ('completed', 'Completed'), ('cancel', 'Cancelled')], default='draft',
                              string="Status")
