@@ -60,9 +60,10 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <t t-set="sl_no" t-value="1"/>
+                                <t t-set="sl_no" t-value="0"/>
                                 <t t-foreach="o.get_activity_report()" t-as="line">
                                     <tr>
+                                        <t t-set="sl_no" t-value="sl_no + 1"/>
                                         <td>
                                             <t t-esc="sl_no"/>
                                         </td>

@@ -41,7 +41,7 @@ class ActivityReport(models.Model):
             'type': 'ir.actions.report.xml',
             'report_name': 'sesa_requirement.activity_report_template',
             'datas': datas,
-            'report_type': 'qweb-html',
+            'report_type': 'qweb-pdf',
         }
 
     @api.multi
