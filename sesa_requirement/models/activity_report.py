@@ -33,16 +33,31 @@ class ActivityReport(models.Model):
             'form': self.read(),
             'context': self._context,
         }
-        # data = self.env['ir.actions.report.xml'].search(
-        #     [('model', '=', 'event.event'), ('report_name', '=', 'sesa_requirement.activity_report_template',)])
-        # if data.download_filename:
-        #     data.download_filename = ''
+        data = self.env['ir.actions.report.xml'].search(
+            [('model', '=', 'event.event'), ('report_name', '=', 'sesa_requirement.activity_report_template',)])
+        if data.download_filename:
+            data.download_filename = 'ActivityReport'
         return {
             'type': 'ir.actions.report.xml',
             'report_name': 'sesa_requirement.activity_report_template',
             'datas': datas,
             'report_type': 'qweb-pdf',
         }
+
+    @api.multi
+    def print_activity_report_xlsx_report(self):
+        datas = {
+            'ids': self._ids,
+            'model': self._name,
+            'form': self.read(),
+            'context': self._context,
+        }
+        return {'type': 'ir.actions.report.xml',
+                'report_name': 'sesa_requirement.activity_report_template_xlsx.xlsx',
+                'report_type': 'xlsx',
+                'datas': datas
+                }
+
 
     @api.multi
     def get_activity_report(self):

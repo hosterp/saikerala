@@ -4,7 +4,7 @@
     'category': 'Committee',
     'sequence': 21,
     'description': """ Committee Management """,
-    'depends': ['hr','asn_baby_blue',],
+    'depends': ['hr','asn_baby_blue','report_xlsx',],
     'data': [
             'views/requirement_new.xml',
             'views/dashboard_view.xml',

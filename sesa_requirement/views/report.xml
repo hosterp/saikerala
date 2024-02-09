@@ -24,7 +24,8 @@
 						  <field name="event_category" />
 					</group>
 					<footer>
-						<button name="print_activity_report" type="object" string="Print" class="oe_highlight" />
+						<button name="print_activity_report" type="object" string="Print Pdf" class="oe_highlight" />
+						<button name="print_activity_report_xlsx_report" type="object" string="Print Excel" class="oe_highlight" />
 						<button string="Cancel" class="oe_link" special="cancel" />
 					</footer>
 				</form>
@@ -42,70 +43,68 @@
                             </center>
                         </div>
                         <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th>Sl No</th>
-                                    <th>Name</th>
-                                    <th>Reporting In-Charge</th>
-                                    <th>Event Category</th>
-                                    <th>Event type</th>
-                                    <th>Date of event</th>
-                                    <th>Place</th>
-                                    <th>Total Attendees</th>
-                                    <th>Total devotees attended</th>
-                                    <th>Details</th>
-                                    <th>Remark</th>
-                                    <th>Status</th>
-                                    <!-- Add other table headers here -->
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <t t-set="sl_no" t-value="0"/>
-                                <t t-foreach="o.get_activity_report()" t-as="line">
+                                <thead>
                                     <tr>
-                                        <t t-set="sl_no" t-value="sl_no + 1"/>
-                                        <td>
-                                            <t t-esc="sl_no"/>
-                                        </td>
-
-                                        <td>
-                                            <t t-esc="line.user.name"/>
-                                        </td>
-                                         <td>
-                                            <t t-esc="line.reporting_incharge.display_name"/>
-                                        </td>
-                                        <td>
-                                            <t t-esc="line.event_category.display_name"/>
-                                        </td>
-                                        <td>
-                                            <t t-esc="line.event_type.display_name"/>
-                                        </td>
-                                        <td>
-                                            <t t-esc="line.date"/>
-                                        </td>
-                                        <td>
-                                            <t t-esc="line.event_place.display_name"/>
-                                        </td>
-                                        <td>
-                                            <t t-esc="line.total_attendees"/>
-                                        </td>
-                                        <td>
-                                            <t t-esc="line.total_devotees_attended"/>
-                                        </td>
-                                        <td>
-                                            <t t-esc="line.desc"/>
-                                        </td>
-                                        <td>
-                                            <t t-esc="line.remark"/>
-                                        </td>
-                                        <td>
-                                            <t t-esc="line.state"/>
-                                        </td>
-
-
+                                        <th>Sl No</th>
+                                        <th>Name</th>
+                                        <th>Reporting In-Charge</th>
+                                        <th>Event Category</th>
+                                        <th>Event type</th>
+                                        <th>Date of event</th>
+                                        <th>Place</th>
+                                        <th>Total Attendees</th>
+                                        <th>Total devotees attended</th>
+                                        <th>Details</th>
+                                        <th>Remark</th>
+                                        <th>Status</th>
+                                        <!-- Add other table headers here -->
                                     </tr>
-                                </t>
-                            </tbody>
+                                </thead>
+                                <tbody>
+                                    <t t-set="sl_no" t-value="0"/>
+                                    <t t-foreach="o.get_activity_report()" t-as="line">
+                                        <tr>
+                                            <t t-set="sl_no" t-value="sl_no + 1"/>
+                                            <td>
+                                                <t t-esc="sl_no"/>
+                                            </td>
+
+                                            <td>
+                                                <t t-esc="line.user.name"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="line.reporting_incharge.display_name"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="line.event_category.display_name"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="line.event_type.display_name"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="line.date"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="line.event_place.display_name"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="line.total_attendees"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="line.total_devotees_attended"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="line.desc"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="line.remark"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="line.state"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
                         </table>
                     </div>
                 </t>
@@ -120,6 +119,13 @@
                 name="sesa_requirement.activity_report_template"/>
 
 
+        <report id="report_activity_excel_id"
+                model="activity.report"
+                string="Activity Report Excel"
+                report_type="xlsx"
+                name="sesa_requirement.activity_report_template_xlsx.xlsx"
+                file="sesa_requirement.activity_report_template_xlsx.xlsx"
+                attachment_use="False"/>
 
         <record id="action_activity_report" model="ir.actions.act_window">
             <field name="name">Activity Report</field>
