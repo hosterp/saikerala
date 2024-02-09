@@ -30,7 +30,7 @@ class Event(models.Model):
     reporting_incharge = fields.Many2one('hr.employee',string="Reporting In-Charge")
     event_place = fields.Many2one('event.place', "Place")
     # event_district = fields.Many2one('event.district',"District")
-    event_district = fields.Selection([('AL', 'AALAPUZHA'),
+    event_district = fields.Selection([('AL', 'ALAPPUZHA'),
                                        ('ER', 'ERNAKULAM'),
                                        ('ID', 'IDUKKI'),
                                        ('KN', 'KANNUR'),
@@ -57,27 +57,8 @@ class Event(models.Model):
                                   string="Attachment",
                                   help='You can attach the copy of your document', copy=False)
     contact_details=fields.Char()
-    date_from=fields.Date('Date From')
-    date_to=fields.Date('Date To')
 
-    @api.multi
-    def print_activity_report(self):
-        datas = {
-            'ids': self._ids,
-            'model': self._name,
-            'form': self.read(),
-            'context': self._context,
-        }
-        data = self.env['ir.actions.report.xml'].search(
-            [('model', '=', 'event.event'), ('report_name', '=', 'sesa_requirement.activity_report_template',)])
-        if data.download_filename:
-            data.download_filename = ''
-        return {
-            'type': 'ir.actions.report.xml',
-            'report_name': 'sesa_requirement.activity_report_template',
-            'datas': datas,
-            'report_type': 'qweb-html',
-        }
+
 
     @api.onchange('event_district')
     def onchange_event_district(self):

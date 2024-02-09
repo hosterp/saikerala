@@ -3,7 +3,7 @@
     <data>
         <record model="ir.ui.view" id="report_wizard_id">
 			<field name="name">Report</field>
-			<field name="model">event.event</field>
+			<field name="model">activity.report</field>
 			<field name="arch" type="xml">
 				<form string="Supplier Invoice History">
 					<group>
@@ -15,12 +15,16 @@
 							<field name="date_from"/>
 							<field name="date_to"/>
 						</group>
+                         <group>
+                            <field name="event_district"/>
+                            <field name="event_place"/>
+                        </group>
 					</group>
 					<group>
 						  <field name="event_category" />
 					</group>
 					<footer>
-						<button  type="object" string="Print" class="oe_highlight" />
+						<button name="print_activity_report" type="object" string="Print" class="oe_highlight" />
 						<button string="Cancel" class="oe_link" special="cancel" />
 					</footer>
 				</form>
@@ -28,137 +32,98 @@
 		</record>
 <!--############################## Template ######################################################-->
 
-<!--		 <template id="activity_report_template">-->
-<!--            <t t-call="report.html_container">-->
-<!--&lt;!&ndash;                <t t-call="report.external_layout">&ndash;&gt;-->
-<!--                    <t t-foreach="docs" t-as="o">-->
-<!--                        <div class="page">-->
-<!--                            <div class="col-xs-12" style='font-size:20px'>-->
-<!--                                <center>-->
-<!--                                    <b>ACTIVITY REPORT</b>-->
-<!--                                </center>-->
-<!--                            </div>-->
-<!--                            <table class="table table-bordered">-->
-<!--                                <tr>-->
-<!--                                    <td style='font-size:15px'>-->
-<!--                                        <b>Sl No</b>-->
-<!--                                    </td>-->
-<!--                                    <td style='font-size:15px'>-->
-<!--                                        <b>Bill Date</b>-->
-<!--                                    </td>-->
-<!--                                    <td style='font-size:15px'>-->
-<!--                                        <b>Bill Nature</b>-->
-<!--                                    </td>-->
-<!--                                    <td style='font-size:15px'>-->
-<!--                                        <b>Invoice No</b>-->
-<!--                                    </td>-->
-<!--                                    <td style='font-size:15px'>-->
-<!--                                        <b>Responsible Person</b>-->
-<!--                                    </td>-->
-<!--                                    <td style='font-size:15px'>-->
-<!--                                        <b>Tax Total</b>-->
-<!--                                    </td>-->
-<!--                                    <td style='font-size:15px'>-->
-<!--                                        <b>Total Amount</b>-->
-<!--                                    </td>-->
-<!--&lt;!&ndash;                                    <t t-if="o.product">&ndash;&gt;-->
-<!--&lt;!&ndash;                                        <td style='font-size:15px'>&ndash;&gt;-->
-<!--&lt;!&ndash;                                            <b>Quantity</b>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        </td>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        <td style='font-size:15px'>&ndash;&gt;-->
-<!--&lt;!&ndash;                                            <b>Rate</b>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        </td>&ndash;&gt;-->
-<!--&lt;!&ndash;                                    </t>&ndash;&gt;-->
+        <template id="activity_report_template">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <div class="page">
+                        <div class="col-xs-12" style='font-size:20px'>
+                            <center>
+                                <b>ACTIVITY REPORT</b>
+                            </center>
+                        </div>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Sl No</th>
+                                    <th>Name</th>
+                                    <th>Reporting In-Charge</th>
+                                    <th>Event Category</th>
+                                    <th>Event type</th>
+                                    <th>Date of event</th>
+                                    <th>Place</th>
+                                    <th>Total Attendees</th>
+                                    <th>Total devotees attended</th>
+                                    <th>Details</th>
+                                    <th>Remark</th>
+                                    <th>Status</th>
+                                    <!-- Add other table headers here -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="sl_no" t-value="1"/>
+                                <t t-foreach="o.get_activity_report()" t-as="line">
+                                    <tr>
+                                        <td>
+                                            <t t-esc="sl_no"/>
+                                        </td>
 
-<!--&lt;!&ndash;                                </tr>&ndash;&gt;-->
-<!--&lt;!&ndash;                                <t t-set="sl_no" t-value="1"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                <t t-set="tax_total" t-value="0"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                <t t-set="total_amount" t-value="0"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                <t t-set="total_quantity" t-value="0"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                <t t-set="total_rate" t-value="0"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                <t t-foreach="o.get_tax_invoices()" t-as="line">&ndash;&gt;-->
-
-<!--&lt;!&ndash;                                    <tr>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        <td style='font-size:15px'>&ndash;&gt;-->
-<!--&lt;!&ndash;                                            <span t-esc="sl_no"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        </td>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        <t t-set="sl_no" t-value="sl_no+1"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        <td style='font-size:15px'>&ndash;&gt;-->
-<!--&lt;!&ndash;                                            <span t-esc="line.invoice_id.date_invoice"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        </td>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        <td style='font-size:15px'>&ndash;&gt;-->
-<!--&lt;!&ndash;                                            <span t-esc="line.invoice_id.bill_nature"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        </td>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        <td style='font-size:15px'>&ndash;&gt;-->
-<!--&lt;!&ndash;                                            <span t-esc="line.invoice_id.number2"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        </td>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        <td style='font-size:15px'>&ndash;&gt;-->
-<!--&lt;!&ndash;                                            <span t-esc="line.invoice_id.res_person.name"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        </td>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        <td style='font-size:15px'>&ndash;&gt;-->
-<!--&lt;!&ndash;                                            <span t-esc="line.amt_tax"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        </td>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        <t t-set="tax_total" t-value="tax_total+line.amt_tax"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        <td style='font-size:15px'>&ndash;&gt;-->
-<!--&lt;!&ndash;                                            <span t-esc="line.amt_w_tax"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        </td>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        <t t-set="total_amount" t-value="total_amount+line.amt_w_tax"/>&ndash;&gt;-->
-
-<!--&lt;!&ndash;                                        <t t-if="o.product">&ndash;&gt;-->
-<!--&lt;!&ndash;                                            <td style='font-size:15px'>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                <span t-esc="line.quantity"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                            </td>&ndash;&gt;-->
-<!--&lt;!&ndash;                                            <t t-set="total_quantity" t-value="total_quantity+line.quantity"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                            <td style='font-size:15px'>&ndash;&gt;-->
-<!--&lt;!&ndash;                                                <span t-esc="line.price_subtotal"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                            </td>&ndash;&gt;-->
-<!--&lt;!&ndash;                                            <t t-set="total_rate" t-value="total_rate+line.price_subtotal"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        </t>&ndash;&gt;-->
-<!--&lt;!&ndash;                                    </tr>&ndash;&gt;-->
-
-<!--&lt;!&ndash;                                </t>&ndash;&gt;-->
-<!--&lt;!&ndash;                                <tr>&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <td/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <td/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <td/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <td/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <td/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <td style='font-size:15px'>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        <span t-esc="tax_total"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                    </td>&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <td style='font-size:15px'>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        <span t-esc="total_amount"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                    </td>&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <t t-if="o.product">&ndash;&gt;-->
-<!--&lt;!&ndash;                                        <td style='font-size:15px'>&ndash;&gt;-->
-<!--&lt;!&ndash;                                            <span t-esc="total_quantity"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        </td>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        <td style='font-size:15px'>&ndash;&gt;-->
-<!--&lt;!&ndash;                                            <span t-esc="total_rate"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                                        </td>&ndash;&gt;-->
-<!--&lt;!&ndash;                                    </t>&ndash;&gt;-->
-<!--                                </tr>-->
-
-<!--                            </table>-->
+                                        <td>
+                                            <t t-esc="line.user.name"/>
+                                        </td>
+                                         <td>
+                                            <t t-esc="line.reporting_incharge.display_name"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="line.event_category.display_name"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="line.event_type.display_name"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="line.date"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="line.event_place.display_name"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="line.total_attendees"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="line.total_devotees_attended"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="line.desc"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="line.remark"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="line.state"/>
+                                        </td>
 
 
-<!--                        </div>-->
-<!--                    </t>-->
-<!--&lt;!&ndash;                </t>&ndash;&gt;-->
-<!--            </t>-->
-<!--        </template>-->
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </template>
 
-
-
-
-
+        <report
+                id="activity_report"
+                string="Activity Report"
+                model="activity.report"
+                report_type="qweb-pdf"
+                name="sesa_requirement.activity_report_template"/>
 
 
 
         <record id="action_activity_report" model="ir.actions.act_window">
             <field name="name">Activity Report</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="res_model">event.event</field>
+            <field name="res_model">activity.report</field>
             <field name="target">new</field>
             <field name="view_type">form</field>
             <field name="view_mode">form</field>
