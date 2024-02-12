@@ -84,4 +84,20 @@ class ActivityReport(models.Model):
                     ('date', '<=', self.date_to),
                     ('event_category', '=', self.event_category.id),
                 ])
+            if self.event_district and self.event_place:
+                invoice_ids = self.env['event.event'].search([
+                    ('date', '>=', self.date_from),
+                    ('date', '<=', self.date_to),
+                    ('event_district', '=', self.event_district),
+                    ('event_place', '=', self.event_place.id),
+                ])
+            if self.event_district and self.event_place and self.event_category:
+                invoice_ids = self.env['event.event'].search([
+                    ('date', '>=', self.date_from),
+                    ('date', '<=', self.date_to),
+                    ('event_district', '=', self.event_district),
+                    ('event_place', '=', self.event_place.id),
+                    ('event_category', '=', self.event_category.id),
+                ])
+
         return invoice_ids

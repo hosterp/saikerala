@@ -24,7 +24,7 @@
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" style="margin: 39px 0px 0px -12px;" type="object" name="call_place" string="View">View Samithy Details</button>
+								                                    	<button class="your_custom_button" style="margin: 39px 0px 0px -12px;" type="object" name="call_place" string="View">View Samithi Details</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -48,7 +48,7 @@
 							                            	<tr>
 								                                <div>
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;;" name="call_kollam" string="View">View Samithy Details</button>
+								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;;" name="call_kollam" string="View">View Samithi Details</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -72,7 +72,7 @@
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_pta" string="View">View Samithy Details</button>
+								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_pta" string="View">View Samithi Details</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -97,7 +97,7 @@
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object"  style="margin: 39px 0px 0px -12px;" name="call_al" string="View">View Samithy Details</button>
+								                                    	<button class="your_custom_button" type="object"  style="margin: 39px 0px 0px -12px;" name="call_al" string="View">View Samithi Details</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -123,7 +123,7 @@
 							                            	<tr>
 								                                <div>
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_kt" string="View">View Samithy Details</button>
+								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_kt" string="View">View Samithi Details</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -150,7 +150,7 @@
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_id" string="View">View Samithy Details</button>
+								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_id" string="View">View Samithi Details</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -174,7 +174,7 @@
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_er" string="View">View Samithy Details</button>
+								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_er" string="View">View Samithi Details</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -198,7 +198,7 @@
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_ts" string="View">View Samithy Details</button>
+								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_ts" string="View">View Samithi Details</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -222,7 +222,7 @@
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_pl" string="View">View Samithy Details</button>
+								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_pl" string="View">View Samithi Details</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -246,7 +246,7 @@
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_ma" string="View">View Samithy Details</button>
+								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_ma" string="View">View Samithi Details</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -273,7 +273,7 @@
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_kz" string="View">View Samithy Details</button>
+								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_kz" string="View">View Samithi Details</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -297,7 +297,7 @@
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_wa" string="View">View Samithy Details</button>
+								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_wa" string="View">View Samithi Details</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -321,7 +321,7 @@
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_kn" string="View">View Samithy Details</button>
+								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_kn" string="View">View Samithi Details</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -345,7 +345,7 @@
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_ks" string="View">View Samithy Details</button>
+								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_ks" string="View">View Samithi Details</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
@@ -369,7 +369,7 @@
 							                            	<tr>
 								                                <div >
 								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_admin" string="View">View Samithy Details</button>
+								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_admin" string="View">View Samithi Details</button>
 								                                	</left>
 								                                </div>
 								                            </tr>
