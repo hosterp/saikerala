@@ -5,8 +5,8 @@ class ActivityReport(models.Model):
     _name = 'activity.report'
 
 
-    date_from =fields.Date('Date From')
-    date_to =fields.Date('Date To')
+    date_from =fields.Date('Date From' ,required="True")
+    date_to =fields.Date('Date To' ,required="True")
     event_category = fields.Many2one('event.category', "Event Category")
     event_district = fields.Selection([('AL', 'ALAPPUZHA'),
                                        ('ER', 'ERNAKULAM'),

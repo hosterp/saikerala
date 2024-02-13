@@ -14,6 +14,7 @@
             'views/res_partner_view.xml',
             'views/template.xml',
             'views/report.xml',
+            'views/samithi_details_report.xml',
     ],
     # 'css': [
     #     "static/src/css/styles.css",

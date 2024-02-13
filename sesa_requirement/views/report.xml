@@ -110,7 +110,7 @@
                 </t>
             </t>
         </template>
-
+<!--####################################################################################################################-->
         <report
                 id="activity_report"
                 string="Activity Report"
@@ -138,8 +138,10 @@
         </record>
 
 
+
         <menuitem id="menu_activity_report" name="Report" sequence="99"/>
         <menuitem id="submenu_activity_report" parent="menu_activity_report" name="Activity Report" sequence="99"/>
         <menuitem id="sub_activity_report" parent="submenu_activity_report" name="Reports" sequence="99" action="action_activity_report"/>
+
     </data>
 </openerp>

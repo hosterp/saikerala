@@ -139,6 +139,8 @@ class Place(models.Model):
                                        ('TS', 'THRISSUR'),
                                        ('WA', 'WAYANAD')])
 
+    date=fields.Date(default=fields.Date.today,required='True')
+
     def call_event(self, cr, uid, ids, context):
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
