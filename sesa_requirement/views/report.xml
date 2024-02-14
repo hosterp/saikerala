@@ -57,62 +57,62 @@
                         <br></br>
                         <table class="table table-bordered" style="border:1px solid black;">
                                 <thead style="border:1px solid black;">
-                                    <tr style="border:1px solid black;">
-                                        <th >Sl No</th>
-                                        <th>Name</th>
-                                        <th >Reporting In-Charge</th>
-                                        <th >Event Category</th>
-                                        <th>Event type</th>
-                                        <th >Date of event</th>
-                                        <th>Place</th>
-                                        <th >Total Attendees</th>
-                                        <th >Total devotees attended</th>
-                                        <th >Details</th>
-                                        <th>Remark</th>
-                                        <th>Status</th>
+                                    <tr >
+                                        <th style="border:1px solid black;">Sl No</th>
+                                        <th style="border:1px solid black;">Name</th>
+                                        <th style="border:1px solid black;">Reporting In-Charge</th>
+                                        <th style="border:1px solid black;">Event Category</th>
+                                        <th style="border:1px solid black;">Event type</th>
+                                        <th style="border:1px solid black;" >Date of event</th>
+                                        <th style="border:1px solid black;">Place</th>
+                                        <th style="border:1px solid black;">Total Attendees</th>
+                                        <th style="border:1px solid black;">Total devotees attended</th>
+                                        <th style="border:1px solid black;">Details</th>
+                                        <th style="border:1px solid black;">Remark</th>
+                                        <th style="border:1px solid black;">Status</th>
                                         <!-- Add other table headers here -->
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <t t-set="sl_no" t-value="0"/>
                                     <t t-foreach="o.get_activity_report()" t-as="line">
-                                        <tr style="border:1px solid black;">
+                                        <tr>
                                             <t t-set="sl_no" t-value="sl_no + 1"/>
-                                            <td >
+                                            <td style="border:1px solid black;">
                                                 <t t-esc="sl_no"/>
                                             </td>
 
-                                            <td>
+                                            <td style="border:1px solid black;">
                                                 <t t-esc="line.user.name"/>
                                             </td>
-                                            <td >
+                                            <td style="border:1px solid black;">
                                                 <t t-esc="line.reporting_incharge.display_name"/>
                                             </td>
-                                            <td >
+                                            <td style="border:1px solid black;">
                                                 <t t-esc="line.event_category.display_name"/>
                                             </td>
-                                            <td >
+                                            <td style="border:1px solid black;">
                                                 <t t-esc="line.event_type.display_name"/>
                                             </td>
-                                            <td >
+                                            <td style="border:1px solid black;">
                                                 <t t-esc="line.date"/>
                                             </td>
-                                            <td >
+                                            <td style="border:1px solid black;">
                                                 <t t-esc="line.event_place.display_name"/>
                                             </td>
-                                            <td >
+                                            <td style="border:1px solid black;">
                                                 <t t-esc="line.total_attendees"/>
                                             </td>
                                             <td >
                                                 <t t-esc="line.total_devotees_attended"/>
                                             </td>
-                                            <td>
+                                            <td style="border:1px solid black;">
                                                 <t t-esc="line.desc"/>
                                             </td>
-                                            <td >
+                                            <td style="border:1px solid black;">
                                                 <t t-esc="line.remark"/>
                                             </td>
-                                            <td >
+                                            <td style="border:1px solid black;">
                                                 <t t-esc="line.state"/>
                                             </td>
                                         </tr>
