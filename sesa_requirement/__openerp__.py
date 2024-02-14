@@ -22,6 +22,9 @@
     'js': [
         'static/src/js/custom_webclient.js',
     ],
+    # 'css': [
+    #     'static/src/css/styles.css',
+    # ],
     'qweb': [
         "static/src/xml/*.xml",
         # "static/src/css/styles.css",

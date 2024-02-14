@@ -4,3 +4,4 @@ import hr_employee
 import activity_report
 import activity_report_xlsx
 import samithi_details
+import samithi_details_xlsx

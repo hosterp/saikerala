@@ -17,7 +17,7 @@
                     </group>
                     <footer>
                         <button name="print_samithi_details_report" type="object" string="Print Pdf" class="oe_highlight"/>
-                        <button type="object" string="Print Excel" class="oe_highlight"/>
+                        <button name="print_samithi_details_report_xlsx_report" type="object" string="Print Excel" class="oe_highlight"/>
                         <button string="Cancel" class="oe_link" special="cancel"/>
                     </footer>
                 </form>
@@ -60,7 +60,15 @@
 <!--                                            <t t-esc="line.event_district"/>-->
 <!--                                        </td>-->
                                     </tr>
+
                                 </t>
+                                <tr>
+                                    <td colspan="3">
+                                        <b>Total Samithis:
+                                            <t t-esc="sl_no"/>
+                                        </b>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -69,6 +77,14 @@
         </template>
 
         <report id="samithi_details_report" string="Samithi Details Report" model="samithi.details.report" report_type="qweb-pdf" name="samithi_details_report_template"/>
+
+        <report id="report_samithi_details_excel_id"
+                model="samithi.details.report"
+                string="Samithi Details Report Excel"
+                report_type="xlsx"
+                name="sesa_requirement.samithi_details_report_template_xlsx.xlsx"
+                file="sesa_requirement.samithi_details_report_template_xlsx.xlsx"
+                attachment_use="False"/>
 
         <record id="action_samithi_details_report" model="ir.actions.act_window">
             <field name="name">Samithi Details Report</field>

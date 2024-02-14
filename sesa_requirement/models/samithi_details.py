@@ -44,6 +44,20 @@ class SamithidetailsReport(models.Model):
         }
 
     @api.multi
+    def print_samithi_details_report_xlsx_report(self):
+        datas = {
+            'ids': self._ids,
+            'model': self._name,
+            'form': self.read(),
+            'context': self._context,
+        }
+        return {'type': 'ir.actions.report.xml',
+                'report_name': 'sesa_requirement.samithi_details_report_template_xlsx.xlsx',
+                'report_type': 'xlsx',
+                'datas': datas
+                }
+
+    @api.multi
     def get_samithi_details_report(self):
         data = self.env['event.place']
 

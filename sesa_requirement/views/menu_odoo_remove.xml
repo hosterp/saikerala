@@ -69,5 +69,15 @@
            <xpath expr="//div[@class='oe_footer']" position="replace">
            </xpath>
         </template>
+        <template id="inherit_web_login" inherit_id="web.login">
+            <xpath expr="//div[@class='form-group field-login']" position="replace">
+                <!-- Replace the entire div with your custom modifications -->
+                <div class="form-group field-login custom-class">
+                    <label for="login" class="control-label">User Name</label>
+                    <!-- Modify the input field as needed -->
+                    <input type="text" name="login" t-att-value="login" id="login" class="form-control custom-input" required="required" autofocus="autofocus"/>
+                </div>
+            </xpath>
+        </template>
     </data>
 </openerp>

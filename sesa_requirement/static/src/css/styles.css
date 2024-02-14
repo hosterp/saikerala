@@ -25,3 +25,8 @@
  .center-align {
         text-align: center;
     }
+
+body.oe_single_form {
+  background: #eee url(/sesa_requirement/static/src/img/bg.png);
+  height: 100%;
+}
