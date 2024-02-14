@@ -103,7 +103,7 @@
                                             <td style="border:1px solid black;">
                                                 <t t-esc="line.total_attendees"/>
                                             </td>
-                                            <td >
+                                            <td style="border:1px solid black;">
                                                 <t t-esc="line.total_devotees_attended"/>
                                             </td>
                                             <td style="border:1px solid black;">
