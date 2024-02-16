@@ -17,7 +17,8 @@
                         </group>
                     </group>
                     <footer>
-                        <button name= "print_activity_samithi_details_report" type="object" string="Print Pdf" class="oe_highlight"/>
+                        <button name="print_activity_samithi_details_report" type="object" string="Print Pdf"
+                                class="oe_highlight"/>
                         <button name="print_samithi_details_report_xlsx_report" type="object" string="Print Excel"
                                 class="oe_highlight"/>
                         <button string="Cancel" class="oe_link" special="cancel"/>
@@ -25,48 +26,70 @@
                 </form>
             </field>
         </record>
-<!--##################################################### Template #################################################################-->
+        <!--##################################################### Template #################################################################-->
         <template id="activity_samithi_details_report_template">
             <t t-call="report.html_container">
                 <t t-foreach="docs" t-as="o">
                     <div class="page">
-                           <div style="border:4px solid black;">
+                        <div style="border:4px solid black;">
                             <center>
                                 <h3>
-                                       <b>Aum Sai Ram Ram</b>
+                                    <b>Aum Sai Ram Ram</b>
                                 </h3>
                             </center>
                             <center>
                                 <h5>
-                                       <b>SSSSOINDIA, Zone – South</b>
+                                    <b>SSSSOINDIA, Zone – South</b>
                                 </h5>
                             </center>
-                             <center>
-                                 <h4>
-                                          <b>ACTIVITY REPORT</b>
-                                 </h4>
-                             </center>
+                            <center>
+                                <h4>
+                                    <b>ACTIVITY REPORT</b>
+                                </h4>
+                            </center>
                         </div>
                         <br></br>
+                        <table  class="table table-bordered" style="border:1px solid black;">
+                            <thead>
+                                <tr>
+                                    <th>Sl No</th>
+                                    <th>Samithi</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                             <t t-set="sl_no" t-value="0"/>
+                                    <t t-foreach="o.get_samithi_details_report()" t-as="line">
+                                        <tr>
+                                            <t t-set="sl_no" t-value="sl_no + 1"/>
+                                            <td style="border:1px solid black;">
+                                                <t t-esc="sl_no"/>
+                                            </td>
+                                            <td style="border:1px solid black;">
+                                                <t t-esc="line.place"/>
+                                            </td>
+                                            <td style="border:1px solid black;">
+                                                <t t-esc="line.date"/>
+                                            </td>
+
+                                        </tr>
+
+                                    </t>
+                            </tbody>
+                        </table>
                     </div>
                 </t>
             </t>
         </template>
 
 
-
-
-<!--#######################################################################################################################################-->
-          <report
+        <!--#######################################################################################################################################-->
+        <report
                 id="activity_samithi_details_report"
                 string="Samithi Details Report"
                 model="samithi.details.report"
                 report_type="qweb-pdf"
                 name="sesa_requirement.activity_samithi_details_report_template"/>
-
-
-
-
 
 
         <report id="report_samithi_details_excel_id"
