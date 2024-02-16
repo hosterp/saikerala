@@ -206,6 +206,7 @@
                             <group>
                                  <field name="attachment" widget="many2many_binary" string="Attachment(s)"/>
                                 <field name="date" />
+                                <field name="revived_samithi" />
                                 <field name="event_district" />
                                 <field name="event_place" />
                                 <field name="total_attendees" />
@@ -334,7 +335,7 @@
         <menuitem id="submenu_activity" parent="menu_activity" name="Activity" sequence="2" />
         <menuitem id="sub_submenu_event" parent="submenu_activity" name="All Event Details" sequence="2" action="action_event"/>
         <menuitem id="sub_submenu_activity" parent="submenu_activity" name="Activity" sequence="3" action="action_event"/>
-<!--        <menuitem id="sub_submenu_expenses" parent="submenu_activity" name="Expenses" sequence="4" action="action_expense"/>-->
+
 <!--        <menuitem id="sub_submenu_reports" parent="submenu_activity" name="Reports" sequence="4" action="action_expense"/>-->
 <!--	-->
     </data>

@@ -15,9 +15,11 @@
 							<field name="date_from"/>
 							<field name="date_to"/>
 						</group>
-                         <group>
+                        <group>
+                            <field name="revived_samithi"/>
                             <field name="event_district"/>
-                            <field name="event_place"/>
+                            <field name="event_place"  attrs="{'invisible': [('revived_samithi','=', True)]}"/>
+
                         </group>
 					</group>
 					<group>
@@ -155,6 +157,7 @@
         <menuitem id="menu_activity_report" name="Report" sequence="99"/>
         <menuitem id="submenu_activity_report" parent="menu_activity_report" name="Activity Report" sequence="99"/>
         <menuitem id="sub_activity_report" parent="submenu_activity_report" name="Reports" sequence="99" action="action_activity_report"/>
+        <menuitem id="samithi_details_report" parent="submenu_activity_report" name="Samithi Details" sequence="100" action="action_samithi_details_report"/>
 
     </data>
 </openerp>

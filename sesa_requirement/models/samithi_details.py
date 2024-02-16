@@ -31,14 +31,14 @@ class SamithidetailsReport(models.Model):
             'form': self.read(),
             'context': self._context,
         }
-        data = self.env['ir.actions.report.xml'].search(
-            [('model', '=', 'event.place'),
-             ('report_name', '=', 'sesa_requirement.samithi_details_report_template',)])
-        if data.download_filename:
-            data.download_filename = 'Samithi Details Report'
+        # data = self.env['ir.actions.report.xml'].search(
+        #     [('model', '=', 'event.place'),
+        #      ('report_name', '=', 'sesa_requirement.samithidetails_report_template',)])
+        # if data.download_filename:
+        #     data.download_filename = 'Samithi Details Report'
         return {
             'type': 'ir.actions.report.xml',
-            'report_name': 'sesa_requirement.samithi_details_report_template',
+            'report_name': 'sesa_requirement.samithidetails_report_template',
             'datas': datas,
             'report_type': 'qweb-pdf',
         }

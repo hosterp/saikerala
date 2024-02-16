@@ -24,6 +24,7 @@ class ActivityReport(models.Model):
                                        ('WA', 'WAYANAD')])
 
     event_place = fields.Many2one('event.place', "Place")
+    revived_samithi = fields.Boolean(string="Revived Samithi")
 
     @api.multi
     def print_activity_report(self):
@@ -78,11 +79,11 @@ class ActivityReport(models.Model):
                     ('date', '<=', self.date_to),
                     ('event_place', '=', self.event_place.id),
                 ])
-            if self.event_category:
+            if self.revived_samithi:
                 invoice_ids = self.env['event.event'].search([
                     ('date', '>=', self.date_from),
                     ('date', '<=', self.date_to),
-                    ('event_category', '=', self.event_category.id),
+                    ('revived_samithi', '=', True),
                 ])
             if self.event_district and self.event_place:
                 invoice_ids = self.env['event.event'].search([
@@ -90,6 +91,22 @@ class ActivityReport(models.Model):
                     ('date', '<=', self.date_to),
                     ('event_district', '=', self.event_district),
                     ('event_place', '=', self.event_place.id),
+                    ('revived_samithi', '=', True),
+                ])
+            if self.event_district and self.revived_samithi:
+                invoice_ids = self.env['event.event'].search([
+                    ('date', '>=', self.date_from),
+                    ('date', '<=', self.date_to),
+                    ('event_district', '=', self.event_district),
+                    ('revived_samithi', '=', True),
+                ])
+            if self.event_district and self.revived_samithi and self.event_category:
+                invoice_ids = self.env['event.event'].search([
+                    ('date', '>=', self.date_from),
+                    ('date', '<=', self.date_to),
+                    ('event_district', '=', self.event_district),
+                    ('revived_samithi', '=', True),
+                    ('event_category', '=', self.event_category.id),
                 ])
             if self.event_district and self.event_place and self.event_category:
                 invoice_ids = self.env['event.event'].search([
@@ -98,6 +115,7 @@ class ActivityReport(models.Model):
                     ('event_district', '=', self.event_district),
                     ('event_place', '=', self.event_place.id),
                     ('event_category', '=', self.event_category.id),
+
                 ])
 
-        return invoice_ids
+            return invoice_ids

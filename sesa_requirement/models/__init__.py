@@ -5,3 +5,4 @@ import activity_report
 import activity_report_xlsx
 import samithi_details
 import samithi_details_xlsx
+import revived_samithi

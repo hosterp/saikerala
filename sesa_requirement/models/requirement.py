@@ -57,7 +57,7 @@ class Event(models.Model):
                                   string="Attachment",
                                   help='You can attach the copy of your document', copy=False)
     contact_details=fields.Char()
-
+    revived_samithi=fields.Boolean(string="Revived Samithi")
 
 
     @api.onchange('event_district')
