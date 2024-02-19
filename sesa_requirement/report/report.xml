@@ -75,7 +75,7 @@
                 </div>
                 <t t-foreach="docs" t-as="o">
                     <div class="page">
-                        <br></br>
+                    
                         <table class="table table-bordered" style="border:1px solid black;">
                                 <thead style="border:1px solid black;">
                                     <tr>
