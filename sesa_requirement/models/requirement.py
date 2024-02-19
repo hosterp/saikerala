@@ -58,6 +58,8 @@ class Event(models.Model):
                                   help='You can attach the copy of your document', copy=False)
     contact_details=fields.Char()
     revived_samithi=fields.Boolean(string="Revived Samithi")
+    time = fields.Float(string="Time")
+
 
 
     @api.onchange('event_district')

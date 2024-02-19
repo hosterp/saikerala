@@ -13,8 +13,8 @@
             'views/hr_employee_view.xml',
             'views/res_partner_view.xml',
             'views/template.xml',
-            'views/report.xml',
-            'views/samithi_details_report.xml',
+            'report/report.xml',
+            'report/samithi_details_report.xml',
             'views/revived_samithi.xml',
     ],
     # 'css': [
@@ -23,6 +23,7 @@
     'js': [
         'static/src/js/custom_webclient.js',
     ],
+    "images": ['img/sssso_logo.png', ],
     # 'css': [
     #     'static/src/css/styles.css',
     # ],

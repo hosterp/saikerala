@@ -25,6 +25,7 @@ class ActivityReport(models.Model):
 
     event_place = fields.Many2one('event.place', "Place")
     revived_samithi = fields.Boolean(string="Revived Samithi")
+    event_type = fields.Many2one('event.type')
 
     @api.multi
     def print_activity_report(self):
@@ -43,6 +44,25 @@ class ActivityReport(models.Model):
             'report_name': 'sesa_requirement.activity_report_template',
             'datas': datas,
             'report_type': 'qweb-pdf',
+        }
+
+    @api.multi
+    def print_activity_report_view(self):
+        datas = {
+            'ids': self._ids,
+            'model': self._name,
+            'form': self.read(),
+            'context': self._context,
+        }
+        data = self.env['ir.actions.report.xml'].search(
+            [('model', '=', 'event.event'), ('report_name', '=', 'sesa_requirement.activity_report_template',)])
+        if data.download_filename:
+            data.download_filename = 'ActivityReport'
+        return {
+            'type': 'ir.actions.report.xml',
+            'report_name': 'sesa_requirement.activity_report_template',
+            'datas': datas,
+            'report_type': 'qweb-html',
         }
 
     @api.multi

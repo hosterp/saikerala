@@ -204,14 +204,18 @@
                                 <field name="contact_details" string="Phone Number"/>
                             </group>
                             <group>
-                                 <field name="attachment" widget="many2many_binary" string="Attachment(s)"/>
+
                                 <field name="date" />
                                 <field name="revived_samithi" />
                                 <field name="event_district" />
                                 <field name="event_place" />
                                 <field name="total_attendees" />
                                 <field name="total_devotees_attended" />
+                                 <field name="attachment" widget="many2many_binary" string="Attachment(s)"/>
+<!--                                  <group><field name="time"></field></group>-->
                             </group>
+
+
 <!--                            <field name="advance" />-->
 <!--                        </group>-->
 <!--                        <group>-->
