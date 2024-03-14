@@ -113,6 +113,42 @@ class ActivityReport(models.Model):
                     ('event_place', '=', self.event_place.id),
                     ('revived_samithi', '=', True),
                 ])
+            if self.event_type:
+                invoice_ids = self.env['event.event'].search([
+                    ('date', '>=', self.date_from),
+                    ('date', '<=', self.date_to),
+                    ('event_type', '=', self.event_type.id),
+                ])
+            if self.event_type and  self.event_district:
+                invoice_ids = self.env['event.event'].search([
+                    ('date', '>=', self.date_from),
+                    ('date', '<=', self.date_to),
+                    ('event_type', '=', self.event_type.id),
+                    ('event_district', '=', self.event_district),
+                ])
+            if self.event_type and self.event_place:
+                invoice_ids = self.env['event.event'].search([
+                    ('date', '>=', self.date_from),
+                    ('date', '<=', self.date_to),
+                    ('event_type', '=', self.event_type.id),
+                    ('event_place', '=', self.event_place.id),
+                ])
+            if self.event_type and self.event_category:
+                invoice_ids = self.env['event.event'].search([
+                    ('date', '>=', self.date_from),
+                    ('date', '<=', self.date_to),
+                    ('event_type', '=', self.event_type.id),
+                    ('event_category', '=', self.event_category.id),
+                ])
+            if self.event_type and self.event_category and self.event_place  and  self.event_district:
+                invoice_ids = self.env['event.event'].search([
+                    ('date', '>=', self.date_from),
+                    ('date', '<=', self.date_to),
+                    ('event_type', '=', self.event_type.id),
+                    ('event_category', '=', self.event_category.id),
+                    ('event_place', '=', self.event_place.id),
+                    ('event_district', '=', self.event_district),
+                ])
             if self.event_district and self.revived_samithi:
                 invoice_ids = self.env['event.event'].search([
                     ('date', '>=', self.date_from),

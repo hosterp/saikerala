@@ -338,7 +338,7 @@
 		<menuitem id="menu_activity"  name="Activity" sequence="2" />
         <menuitem id="submenu_activity" parent="menu_activity" name="Activity" sequence="2" />
         <menuitem id="sub_submenu_event" parent="submenu_activity" name="All Event Details" sequence="2" action="action_event"/>
-        <menuitem id="sub_submenu_activity" parent="submenu_activity" name="Activity" sequence="3" action="action_event"/>
+
 
 <!--        <menuitem id="sub_submenu_reports" parent="submenu_activity" name="Reports" sequence="4" action="action_expense"/>-->
 <!--	-->

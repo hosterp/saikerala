@@ -78,7 +78,7 @@
             <field name="res_model">event.place</field>
             <field name="type">ir.actions.act_window</field>
             <field name="view_type">form</field>
-            <field name="view_mode">kanban,form</field>
+            <field name="view_mode">kanban,form,tree</field>
             <field name="domain">[('event_district','=','TV')]</field>
         </record>
 

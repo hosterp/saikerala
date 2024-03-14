@@ -14,8 +14,11 @@
             'views/res_partner_view.xml',
             'views/template.xml',
             'report/report.xml',
+            'report/district_level_report.xml',
             'report/samithi_details_report.xml',
+            'report/bhajan_mandali_report.xml',
             'views/revived_samithi.xml',
+            'views/District_level_meetings.xml',
     ],
     # 'css': [
     #     "static/src/css/styles.css",
