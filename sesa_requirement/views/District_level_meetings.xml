@@ -6,16 +6,18 @@
             <field name="model">event.district</field>
             <field name="arch" type="xml">
                 <form string="Event District Level">
-<!--                    <heder>-->
-<!--                        <button name="print_activity_district_level_meeting_details_report" strint="Print"-->
+<!--                    <header>-->
+<!--                        <button name="print_District_level_details_report_xlsx_report" string="Print xlsx"-->
 <!--                                type="object"/>-->
-<!--                    </heder>-->
+<!--                    </header>-->
+
                     <sheet>
                         <group col="5">
                             <group>
                                 <field name="date" style="width:50%"/>
                                 <field name="no_monthily_meeting" style="width:50%"/>
                                 <field name="no_family" style="width:50%"/>
+                                    <field name="remark" />
                             </group>
                             <group>
                                 <field name="no_saplings"/>
@@ -25,9 +27,7 @@
                                 </field>
                                 <field name="events_planned" colspan="2"/>
                             </group>
-                            <group>
 
-                            </group>
                         </group>
                     </sheet>
 
@@ -55,6 +55,13 @@
                 </tree>
             </field>
         </record>
+          <report id="report_district_details_excel_id"
+                model="event.district"
+                string="District Level Meeting Report Excel"
+                report_type="xlsx"
+                name="sesa_requirement.district_level_details_report_template_xlsx.xlsx"
+                file="sesa_requirement.district_level_details_report_template_xlsx.xlsx"
+                attachment_use="False"/>
 
         <menuitem id="sub_submenu_activity" parent="submenu_activity" name="District Level Meetings" sequence="3"
                   action="action_district_level_activity"/>

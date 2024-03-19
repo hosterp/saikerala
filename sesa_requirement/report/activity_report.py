@@ -175,3 +175,9 @@ class ActivityReport(models.Model):
                 ])
 
             return invoice_ids
+
+    @api.onchange('event_district')
+    def onchange_event_district(self):
+        for record in self:
+            if record.event_district:
+                return {'domain': {'event_place': [('event_district', '=', record.event_district)]}}

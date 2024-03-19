@@ -177,7 +177,7 @@
         <menuitem id="submenu_activity_report" parent="menu_activity_report" name="Activity Report" sequence="99"/>
         <menuitem id="sub_activity_report" parent="submenu_activity_report" name="Reports" sequence="99" action="action_activity_report"/>
         <menuitem id="samithi_details_report" parent="submenu_activity_report" name="Samithi Details" sequence="100" action="action_samithi_details_report"/>
-        <menuitem id="bhajan_madali_details_report" parent="submenu_activity_report" name="Bhajan Mandali Details" sequence="101" action="action_bhajan_mandali_details_report"/>
+<!--        <menuitem id="bhajan_madali_details_report" parent="submenu_activity_report" name="Bhajan Mandali Details" sequence="101" action="action_bhajan_mandali_details_report"/>-->
 
     </data>
 </openerp>

@@ -9,6 +9,7 @@ class DistrictLevelMeetings(models.Model):
     no_family = fields.Integer(string='No. of Families Attend Family Narayana Seva')
     no_saplings = fields.Integer(string='No. of Saplings Planted (Prematharu)')
     missing_activities = fields.Integer(string='Missing Activities')
+    remark= fields.Text(string='Remarks')
 
     @api.multi
     def print_activity_district_level_meeting_details_report(self):
@@ -29,3 +30,17 @@ class DistrictLevelMeetings(models.Model):
             'datas': datas,
             'report_type': 'qweb-pdf',
         }
+
+    @api.multi
+    def print_District_level_details_report_xlsx_report(self):
+        datas = {
+            'ids': self._ids,
+            'model': self._name,
+            'form': self.read(),
+            'context': self._context,
+        }
+        return {'type': 'ir.actions.report.xml',
+                'report_name': 'sesa_requirement.district_level_details_report_template_xlsx.xlsx',
+                'report_type': 'xlsx',
+                'datas': datas
+                }
