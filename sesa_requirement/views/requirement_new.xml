@@ -77,7 +77,7 @@
             <field name="model">event.event</field>
             <field name="priority">1</field>
             <field name="arch" type="xml">
-                <tree create="false" fg_color="green:state == 'completed'" search_view_id="search_med_lot_filter">
+                <tree fg_color="green:state == 'completed'" search_view_id="search_med_lot_filter">
                     <field name="user"/>
                     <field name="reporting_incharge"/>
                     <field name="event_category"/>
@@ -346,6 +346,8 @@
         <menuitem id="menu_activity" name="Activity" sequence="2"/>
         <menuitem id="submenu_activity" parent="menu_activity" name="Activity" sequence="2"/>
         <menuitem id="sub_submenu_event" parent="submenu_activity" name="All Event Details" sequence="2"
+                  action="action_event"/>
+        <menuitem id="sub_submenu_event_activity" parent="submenu_activity" name="Activity" sequence="2"
                   action="action_event"/>
 
 

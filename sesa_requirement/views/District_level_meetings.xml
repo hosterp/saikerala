@@ -12,23 +12,22 @@
 <!--                    </header>-->
 
                     <sheet>
-                        <group col="5">
+
                             <group>
                                 <field name="date" style="width:50%"/>
                                 <field name="no_monthily_meeting" style="width:50%"/>
                                 <field name="no_family" style="width:50%"/>
-                                    <field name="remark" />
-                            </group>
-                            <group>
+
+
                                 <field name="no_saplings"/>
                                 <field name="missing_activities"
                                        string="No of samithies which added missing activities"
                                        help="Specify the number of samithies which added missing activities like Nagarasankeerthan, Balvikas, etc...">
                                 </field>
                                 <field name="events_planned" colspan="2"/>
+                                <field name="remark" />
                             </group>
 
-                        </group>
                     </sheet>
 
                 </form>

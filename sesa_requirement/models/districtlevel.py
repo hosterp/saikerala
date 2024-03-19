@@ -1,9 +1,9 @@
 from openerp import fields, models, api
-
+from datetime import datetime
 class DistrictLevelMeetings(models.Model):
     _name = 'event.district'
 
-    date = fields.Date(string="Date", default=fields.Date.today)
+    date = fields.Datetime(string="Date", default=lambda self: fields.Date.context_today(self))
     events_planned = fields.Text(string="Programs/Events Planned")
     no_monthily_meeting = fields.Integer(string="Monthly Meetings")
     no_family = fields.Integer(string='No. of Families Attend Family Narayana Seva')
