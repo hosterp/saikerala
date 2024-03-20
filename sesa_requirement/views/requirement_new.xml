@@ -252,7 +252,7 @@
                                 <field name="user"/>
                                 <field name="reporting_incharge"/>
                                 <!--                                <field name="event_category" widget="radio"/>-->
-                                <field name="event_category" widget="radio"/>
+                                <field name="event_category" />
                                 <field name="event_type"/>
                                 <field name="contact_details" string="Phone Number"/>
                             </group>
