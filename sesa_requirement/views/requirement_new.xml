@@ -254,6 +254,7 @@
                                 <field name="event_category" widget="radio"/>
                                 <field name="event_type"/>
                                 <field name="contact_details" string="Phone Number"/>
+                                <field name="guru" string="Guru"/>
                             </group>
                             <group>
 

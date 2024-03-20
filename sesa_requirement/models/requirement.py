@@ -59,7 +59,15 @@ class Event(models.Model):
     contact_details=fields.Char()
     revived_samithi=fields.Boolean(string="Revived Samithi")
     time = fields.Float(string="Time")
+    guru = fields.Integer(string="Guru")
+    # category = fields.Boolean(string="Guru")
 
+    # @api.onchange('event_category')
+    # def onchange_category(self):
+    #     if self.event_category.name =='Balvikas':
+    #         self.category=  True
+    #     else:
+    #         self.category=False
 
 
     @api.onchange('event_district')
