@@ -254,10 +254,9 @@
                                 <field name="event_category" widget="radio"/>
                                 <field name="event_type"/>
                                 <field name="contact_details" string="Phone Number"/>
-                                <field name="guru" string="Guru"/>
+                                <field name="guru" string="Guru" attrs="{'invisible': [('event_category', '!=', 'balvikas')]}"/>
                             </group>
                             <group>
-
                                 <field name="date"/>
                                 <field name="revived_samithi"/>
                                 <field name="event_district"/>
@@ -291,7 +290,6 @@
                             <!--                                <input type="file" name="attachment" multiple="true"-->
                             <!--                                       accept="image/*,application/pdf,video/*"/>-->
                         </group>
-
                     </sheet>
                 </form>
             </field>

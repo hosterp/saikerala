@@ -7,7 +7,7 @@ class HRDashboard(models.Model):
 
     color = fields.Integer(string='Color Index')
     name = fields.Char(string="Name")
-
+    image_kanban=fields.Binary('Image')
     def call_place(self,cr,uid,ids,context):
     	mod_obj = self.pool.get('ir.model.data')
     	act_obj = self.pool.get('ir.actions.act_window')
