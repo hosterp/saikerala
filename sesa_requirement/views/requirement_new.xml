@@ -96,7 +96,7 @@
             <field name="model">event.event</field>
             <field name="priority">1</field>
             <field name="arch" type="xml">
-                <tree  fg_color="green:state == 'completed'" search_view_id="search_med_lot_filter">
+                <tree  create="0" fg_color="green:state == 'completed'" search_view_id="search_med_lot_filter">
                     <field name="event_place"/>
                     <field name="reporting_incharge"/>
                     <field name="event_category"/>
@@ -162,6 +162,7 @@
             <field name="res_model">event.event</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form,search</field>
+              <field name="view_id" ref="tree_event_view"/>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
                     Click to create a request for quotation.
