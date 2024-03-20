@@ -110,7 +110,7 @@
                                                 <t t-esc="line.reporting_incharge.display_name"/>
                                             </td>
                                             <td style="border:1px solid black;">
-                                                <t t-esc="line.event_category.display_name"/>
+                                                <t t-esc="line.event_category"/>
                                             </td>
                                             <td style="border:1px solid black;">
                                                 <t t-esc="line.event_type.display_name"/>

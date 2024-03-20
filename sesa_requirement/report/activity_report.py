@@ -7,7 +7,13 @@ class ActivityReport(models.Model):
 
     date_from =fields.Date('Date From' ,required="True")
     date_to =fields.Date('Date To' ,required="True")
-    event_category = fields.Many2one('event.category', "Event Category")
+    event_category = fields.Selection([
+        ('balvikas', 'Balvikas'),
+        ('education', 'Education'),
+        ('spiritual', 'Spiritual'),
+        ('mahila', 'Mahila'),
+        ('saiyouth', 'Sai Youth'),
+    ], string='Event Category')
     event_district = fields.Selection([('AL', 'ALAPPUZHA'),
                                        ('ER', 'ERNAKULAM'),
                                        ('ID', 'IDUKKI'),
