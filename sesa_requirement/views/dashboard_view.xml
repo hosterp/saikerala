@@ -1,417 +1,591 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
-	<data>
-		<record id="view_event_dasboard_kanban" model="ir.ui.view">
-	        <field name="name">event.dashboard.view</field>
-	        <field name="model">event.dashboard</field>
-	        <field name="arch" type="xml">
-	        	<kanban class="o_kanban_dashboard" create="0">
-					<templates>
-	        			<t t-name="kanban-box" string="HR">
-				            <table class="oe_kanban_groups" style="min-height: 100px;">
-				                <tr style="width:100px;">
-				                    <td>
-				                        <span t-attf-class="#{kanban_color(661)} oe_kanban_card ">
-				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
-				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
-							                    	<center>
-							                        	<table>
-							                        		<center>
-								                            	<tr>
-								                                	<b><span style="font-size: 16px;text-align: center;margin: 0px -36px 0px -37px;">THIRUVANANTHAPURAM</span></b>
-								                            	</tr>
-								                            </center>
-							                            	<tr>
-								                                <div >
-								                                	<left>
-								                                    	<button class="your_custom_button" style="margin: 39px 0px 0px -12px;" type="object" name="call_place" string="View">View Samithi Details</button>
-								                                	</left>
-								                                </div>
-								                            </tr>
-							                        	</table>
-							                    	</center>
-							                	</div>
-					                        </div>
-					             		</span>
-					         		</td>
-					         		<td>
-				                        <span t-attf-class="#{kanban_color(662)} oe_kanban_card ">
-				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
-				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
-							                    	<center>
-							                        	<table>
-							                            	<tr>
-							                            		<center>
-							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 22px 0px 8px;">KOLLAM</span></b>
-							                              		</center>
-							                            	</tr>
-							                            	<tr>
-								                                <div>
-								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;;" name="call_kollam" string="View">View Samithi Details</button>
-								                                	</left>
-								                                </div>
-								                            </tr>
-							                        	</table>
-							                    	</center>
-							                	</div>
-					                        </div>
-					             		</span>
-					         		</td>
-									<td>
-				                        <span t-attf-class="#{kanban_color(664)} oe_kanban_card ">
-				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
-				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
-							                    	<center>
-							                        	<table>
-							                            	<tr>
-							                            		<center>
-							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px -7px;">PATHANAMTHITTA</span></b>
-							                              		</center>
-							                            	</tr>
-							                            	<tr>
-								                                <div >
-								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_pta" string="View">View Samithi Details</button>
-								                                	</left>
-								                                </div>
-								                            </tr>
-							                        	</table>
-							                    	</center>
-							                	</div>
-					                        </div>
-					             		</span>
-					         		</td>
+    <data>
+        <record id="view_event_dasboard_kanban" model="ir.ui.view">
+            <field name="name">event.dashboard.view</field>
+            <field name="model">event.dashboard</field>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_dashboard" create="0">
+                    <templates>
+                        <t t-name="kanban-box" string="HR">
+                            <table class="oe_kanban_groups" style="min-height: 100px;">
+                                <tr style="width:100px;">
+                                    <td>
+                                        <span t-attf-class="#{kanban_color(661)} oe_kanban_card ">
+                                            <div class="o_project_kanban_main"
+                                                 style="font-size:20px;width:300px;height:150px">
+                                                <div class="o_kanban_card_content" style="position:absolute;left:40px;"
+                                                     align="center">
+                                                    <center>
+                                                        <table>
+                                                            <center>
+                                                                <tr>
+                                                                    <b>
+                                                                        <span style="font-size: 16px;text-align: center;margin: 0px -36px 0px -37px;">
+                                                                            THIRUVANANTHAPURAM
+                                                                        </span>
+                                                                    </b>
+                                                                </tr>
+                                                            </center>
+                                                            <tr>
+                                                                <div>
+                                                                    <left>
+                                                                        <button class="your_custom_button"
+                                                                                style="margin: 39px 0px 0px -12px;"
+                                                                                type="object" name="call_place"
+                                                                                string="View">View Samithi Details
+                                                                        </button>
+                                                                    </left>
+                                                                </div>
+                                                            </tr>
+                                                        </table>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span t-attf-class="#{kanban_color(662)} oe_kanban_card ">
+                                            <div class="o_project_kanban_main"
+                                                 style="font-size:20px;width:300px;height:150px">
+                                                <div class="o_kanban_card_content" style="position:absolute;left:40px;"
+                                                     align="center">
+                                                    <center>
+                                                        <table>
+                                                            <tr>
+                                                                <center>
+                                                                    <b>
+                                                                        <span style="font-size: 16px;text-align: center;margin: 0px 22px 0px 8px;">
+                                                                            KOLLAM
+                                                                        </span>
+                                                                    </b>
+                                                                </center>
+                                                            </tr>
+                                                            <tr>
+                                                                <div>
+                                                                    <left>
+                                                                        <button class="your_custom_button" type="object"
+                                                                                style="margin: 39px 0px 0px -12px;;"
+                                                                                name="call_kollam" string="View">View
+                                                                            Samithi Details
+                                                                        </button>
+                                                                    </left>
+                                                                </div>
+                                                            </tr>
+                                                        </table>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span t-attf-class="#{kanban_color(664)} oe_kanban_card ">
+                                            <div class="o_project_kanban_main"
+                                                 style="font-size:20px;width:300px;height:150px">
+                                                <div class="o_kanban_card_content" style="position:absolute;left:40px;"
+                                                     align="center">
+                                                    <center>
+                                                        <table>
+                                                            <tr>
+                                                                <center>
+                                                                    <b>
+                                                                        <span style="font-size: 16px;text-align: center;margin: 0px 14px 0px -7px;">
+                                                                            PATHANAMTHITTA
+                                                                        </span>
+                                                                    </b>
+                                                                </center>
+                                                            </tr>
+                                                            <tr>
+                                                                <div>
+                                                                    <left>
+                                                                        <button class="your_custom_button" type="object"
+                                                                                style="margin: 39px 0px 0px -12px;"
+                                                                                name="call_pta" string="View">View
+                                                                            Samithi Details
+                                                                        </button>
+                                                                    </left>
+                                                                </div>
+                                                            </tr>
+                                                        </table>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </td>
 
-					         		<td>
-				                        <span t-attf-class="#{kanban_color(663)} oe_kanban_card ">
-				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
-				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
-							                    	<center>
-							                        	<table>
-							                            	<tr>
-							                            		<center>
-							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 5px;">ALAPPUZHA</span></b>
-							                              		</center>
-							                            	</tr>
-							                            	<tr>
-								                                <div >
-								                                	<left>
-								                                    	<button class="your_custom_button" type="object"  style="margin: 39px 0px 0px -12px;" name="call_al" string="View">View Samithi Details</button>
-								                                	</left>
-								                                </div>
-								                            </tr>
-							                        	</table>
-							                    	</center>
-							                	</div>
-					                        </div>
-					             		</span>
-					         		</td>
-
-
-					         		<td>
-				                        <span t-attf-class="#{kanban_color(665)} oe_kanban_card ">
-				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
-				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
-							                    	<center>
-							                        	<table>
-							                            	<tr>
-							                            		<center>
-							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 5px;">KOTTAYAM</span></b>
-							                              		</center>
-							                            	</tr>
-							                            	<tr>
-								                                <div>
-								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_kt" string="View">View Samithi Details</button>
-								                                	</left>
-								                                </div>
-								                            </tr>
-							                        	</table>
-							                    	</center>
-							                	</div>
-					                        </div>
-					             		</span>
-					         		</td>
-								</tr>
-
-					         	<tr style="width:120px;">
-					         		<td>
-				                        <span t-attf-class="#{kanban_color(667)} oe_kanban_card ">
-				                        	<div class="o_project_kanban_main" style="font-size:20px;width:325px;height:150px">
-				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
-							                    	<center>
-							                        	<table>
-							                            	<tr>
-							                            		<center>
-							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 4px;">IDUKKI</span></b>
-							                              		</center>
-							                            	</tr>
-							                            	<tr>
-								                                <div >
-								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_id" string="View">View Samithi Details</button>
-								                                	</left>
-								                                </div>
-								                            </tr>
-							                        	</table>
-							                    	</center>
-							                	</div>
-					                        </div>
-					             		</span>
-					         		</td>
-					     			<td>
-				                        <span t-attf-class="#{kanban_color(668)} oe_kanban_card ">
-				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
-				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
-							                    	<center>
-							                        	<table>
-							                            	<tr>
-							                            		<center>
-							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 10px;">ERNAKULAM</span></b>
-							                              		</center>
-							                            	</tr>
-							                            	<tr>
-								                                <div >
-								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_er" string="View">View Samithi Details</button>
-								                                	</left>
-								                                </div>
-								                            </tr>
-							                        	</table>
-							                    	</center>
-							                	</div>
-					                        </div>
-					             		</span>
-					         		</td>
-					         		<td>
-				                        <span t-attf-class="#{kanban_color(669)} oe_kanban_card ">
-				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
-				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
-							                    	<center>
-							                        	<table>
-							                            	<tr>
-							                            		<center>
-							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 0px;">THRISSUR</span></b>
-							                              		</center>
-							                            	</tr>
-							                            	<tr>
-								                                <div >
-								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_ts" string="View">View Samithi Details</button>
-								                                	</left>
-								                                </div>
-								                            </tr>
-							                        	</table>
-							                    	</center>
-							                	</div>
-					                        </div>
-					             		</span>
-					         		</td>
-					         		<td>
-				                        <span t-attf-class="#{kanban_color(670)} oe_kanban_card ">
-				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
-				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
-							                    	<center>
-							                        	<table>
-							                            	<tr>
-							                            		<center>
-							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 4px;">PALAKKAD</span></b>
-							                              		</center>
-							                            	</tr>
-							                            	<tr>
-								                                <div >
-								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_pl" string="View">View Samithi Details</button>
-								                                	</left>
-								                                </div>
-								                            </tr>
-							                        	</table>
-							                    	</center>
-							                	</div>
-					                        </div>
-					             		</span>
-					         		</td>
-					     			<td>
-				                        <span t-attf-class="#{kanban_color(676)} oe_kanban_card ">
-				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
-				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
-							                    	<center>
-							                        	<table>
-							                            	<tr>
-							                            		<center>
-							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 7px;">MALAPPURAM</span></b>
-							                              		</center>
-							                            	</tr>
-							                            	<tr>
-								                                <div >
-								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_ma" string="View">View Samithi Details</button>
-								                                	</left>
-								                                </div>
-								                            </tr>
-							                        	</table>
-							                    	</center>
-							                	</div>
-					                        </div>
-					             		</span>
-					         		</td>
-								</tr>
-
-					     		<tr style="width:120px;">
-					         		<td>
-				                        <span t-attf-class="#{kanban_color(672)} oe_kanban_card ">
-				                        	<div class="o_project_kanban_main" style="font-size:20px;width:325px;height:150px">
-				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
-							                    	<center>
-							                        	<table>
-							                            	<tr>
-							                            		<center>
-							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 0px;">KOZHIKODE</span></b>
-							                              		</center>
-							                            	</tr>
-							                            	<tr>
-								                                <div >
-								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_kz" string="View">View Samithi Details</button>
-								                                	</left>
-								                                </div>
-								                            </tr>
-							                        	</table>
-							                    	</center>
-							                	</div>
-					                        </div>
-					             		</span>
-					         		</td>
-					         		<td>
-				                        <span t-attf-class="#{kanban_color(673)} oe_kanban_card ">
-				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
-				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
-							                    	<center>
-							                        	<table>
-							                            	<tr>
-							                            		<center>
-							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 10px;">WAYANAD</span></b>
-							                              		</center>
-							                            	</tr>
-							                            	<tr>
-								                                <div >
-								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_wa" string="View">View Samithi Details</button>
-								                                	</left>
-								                                </div>
-								                            </tr>
-							                        	</table>
-							                    	</center>
-							                	</div>
-					                        </div>
-					             		</span>
-					         		</td>
-					     			<td>
-				                        <span t-attf-class="#{kanban_color(674)} oe_kanban_card ">
-				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
-				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
-							                    	<center>
-							                        	<table>
-							                            	<tr>
-							                            		<center>
-							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px -2px;">KANNUR</span></b>
-							                              		</center>
-							                            	</tr>
-							                            	<tr>
-								                                <div >
-								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_kn" string="View">View Samithi Details</button>
-								                                	</left>
-								                                </div>
-								                            </tr>
-							                        	</table>
-							                    	</center>
-							                	</div>
-					                        </div>
-					             		</span>
-					         		</td>
-					         		<td>
-				                        <span t-attf-class="#{kanban_color(675)} oe_kanban_card ">
-				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
-				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
-							                    	<center>
-							                        	<table>
-							                            	<tr>
-							                            		<center>
-							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 12px;">KASARAGOD</span></b>
-							                              		</center>
-							                            	</tr>
-							                            	<tr>
-								                                <div >
-								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_ks" string="View">View Samithi Details</button>
-								                                	</left>
-								                                </div>
-								                            </tr>
-							                        	</table>
-							                    	</center>
-							                	</div>
-					                        </div>
-					             		</span>
-					         		</td>
-									<td>
-				                        <span t-attf-class="#{kanban_color(675)} oe_kanban_card ">
-				                        	<div class="o_project_kanban_main" style="font-size:20px;width:300px;height:150px">
-				                        		<div class="o_kanban_card_content" style="position:absolute;left:40px;" align="center">
-							                    	<center>
-							                        	<table>
-							                            	<tr>
-							                            		<center>
-							                                		<b><span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 12px;">Administrator</span></b>
-							                              		</center>
-							                            	</tr>
-							                            	<tr>
-								                                <div >
-								                                	<left>
-								                                    	<button class="your_custom_button" type="object" style="margin: 39px 0px 0px -12px;" name="call_admin" string="View">View Samithi Details</button>
-								                                	</left>
-								                                </div>
-								                            </tr>
-							                        	</table>
-							                    	</center>
-							                	</div>
-					                        </div>
-					             		</span>
-					         		</td>
-					     		</tr>
-						 	</table>
-						</t>
-					</templates>
-				</kanban>
-			</field>
-		</record>
-
-		<record id="event_dashboard_form_view" model="ir.ui.view">
-			<field name="name">event.dashboard.form.view</field>
-			<field name="model">event.dashboard</field>
-			<field name="arch" type="xml">
-				<form>
-					<group>
-						<field name="color"/>
-						<field name="name"/>
-					</group>
-				</form>
-			</field>
-		</record>
-
-		<record id="action_dashboard" model="ir.actions.act_window">
-		    <field name="name">Sri Sathya Sai Org Kerala </field>
-		    <field name="res_model">event.dashboard</field>
-		    <field name="type">ir.actions.act_window</field>
-		    <field name="view_type">form</field>
-		    <field name="context">{}</field>
-		    <field name="view_mode">kanban,form</field>
-		</record>
+                                    <td>
+                                        <span t-attf-class="#{kanban_color(663)} oe_kanban_card ">
+                                            <div class="o_project_kanban_main"
+                                                 style="font-size:20px;width:300px;height:150px">
+                                                <div class="o_kanban_card_content" style="position:absolute;left:40px;"
+                                                     align="center">
+                                                    <center>
+                                                        <table>
+                                                            <tr>
+                                                                <center>
+                                                                    <b>
+                                                                        <span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 5px;">
+                                                                            ALAPPUZHA
+                                                                        </span>
+                                                                    </b>
+                                                                </center>
+                                                            </tr>
+                                                            <tr>
+                                                                <div>
+                                                                    <left>
+                                                                        <button class="your_custom_button" type="object"
+                                                                                style="margin: 39px 0px 0px -12px;"
+                                                                                name="call_al" string="View">View
+                                                                            Samithi Details
+                                                                        </button>
+                                                                    </left>
+                                                                </div>
+                                                            </tr>
+                                                        </table>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </td>
 
 
-		<menuitem id="menu_home"  name="Home" sequence="1" />
-        <menuitem id="submenu_home" parent="menu_home" name="Sathya Sai Events" sequence="1" />
-        <menuitem id="sub_submenu_dashboard" parent="submenu_home" name="Sathya Sai Events" sequence="1" action="action_dashboard"/>
-	</data>
+                                    <td>
+                                        <span t-attf-class="#{kanban_color(665)} oe_kanban_card ">
+                                            <div class="o_project_kanban_main"
+                                                 style="font-size:20px;width:300px;height:150px">
+                                                <div class="o_kanban_card_content" style="position:absolute;left:40px;"
+                                                     align="center">
+                                                    <center>
+                                                        <table>
+                                                            <tr>
+                                                                <center>
+                                                                    <b>
+                                                                        <span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 5px;">
+                                                                            KOTTAYAM
+                                                                        </span>
+                                                                    </b>
+                                                                </center>
+                                                            </tr>
+                                                            <tr>
+                                                                <div>
+                                                                    <left>
+                                                                        <button class="your_custom_button" type="object"
+                                                                                style="margin: 39px 0px 0px -12px;"
+                                                                                name="call_kt" string="View">View
+                                                                            Samithi Details
+                                                                        </button>
+                                                                    </left>
+                                                                </div>
+                                                            </tr>
+                                                        </table>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr style="width:120px;">
+                                    <td>
+                                        <span t-attf-class="#{kanban_color(667)} oe_kanban_card ">
+                                            <div class="o_project_kanban_main"
+                                                 style="font-size:20px;width:325px;height:150px">
+                                                <div class="o_kanban_card_content" style="position:absolute;left:40px;"
+                                                     align="center">
+                                                    <center>
+                                                        <table>
+                                                            <tr>
+                                                                <center>
+                                                                    <b>
+                                                                        <span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 4px;">
+                                                                            IDUKKI
+                                                                        </span>
+                                                                    </b>
+                                                                </center>
+                                                            </tr>
+                                                            <tr>
+                                                                <div>
+                                                                    <left>
+                                                                        <button class="your_custom_button" type="object"
+                                                                                style="margin: 39px 0px 0px -12px;"
+                                                                                name="call_id" string="View">View
+                                                                            Samithi Details
+                                                                        </button>
+                                                                    </left>
+                                                                </div>
+                                                            </tr>
+                                                        </table>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span t-attf-class="#{kanban_color(668)} oe_kanban_card ">
+                                            <div class="o_project_kanban_main"
+                                                 style="font-size:20px;width:300px;height:150px">
+                                                <div class="o_kanban_card_content" style="position:absolute;left:40px;"
+                                                     align="center">
+                                                    <center>
+                                                        <table>
+                                                            <tr>
+                                                                <center>
+                                                                    <b>
+                                                                        <span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 10px;">
+                                                                            ERNAKULAM
+                                                                        </span>
+                                                                    </b>
+                                                                </center>
+                                                            </tr>
+                                                            <tr>
+                                                                <div>
+                                                                    <left>
+                                                                        <button class="your_custom_button" type="object"
+                                                                                style="margin: 39px 0px 0px -12px;"
+                                                                                name="call_er" string="View">View
+                                                                            Samithi Details
+                                                                        </button>
+                                                                    </left>
+                                                                </div>
+                                                            </tr>
+                                                        </table>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </td>
+<!--                                    <td>-->
+<!--                                        <span t-attf-class="#{kanban_color(675)} oe_kanban_card ">-->
+<!--                                            <div class="o_project_kanban_main"-->
+<!--                                                 style="font-size:20px;width:300px;height:150px">-->
+<!--                                                <div class="o_kanban_card_content" style="position:relative;">-->
+<!--                                                    <div class="image_overlay"-->
+<!--                                                         style="position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5);text-align:center;">-->
+<!--                                                        &lt;!&ndash; Add text or buttons on top of the image &ndash;&gt;-->
+<!--                                                        <img src="/static/src/img/ssso_logo.png" alt="Image"-->
+<!--                                                             style="width:100%;height:100%;object-fit:cover;"/>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </span>-->
+<!--                                    </td>-->
+
+                                    <td>
+                                        <span t-attf-class="#{kanban_color(669)} oe_kanban_card ">
+                                            <div class="o_project_kanban_main"
+                                                 style="font-size:20px;width:300px;height:150px">
+                                                <div class="o_kanban_card_content" style="position:absolute;left:40px;"
+                                                     align="center">
+                                                    <center>
+                                                        <table>
+                                                            <tr>
+                                                                <center>
+                                                                    <b>
+                                                                        <span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 0px;">
+                                                                            THRISSUR
+                                                                        </span>
+                                                                    </b>
+                                                                </center>
+                                                            </tr>
+                                                            <tr>
+                                                                <div>
+                                                                    <left>
+                                                                        <button class="your_custom_button" type="object"
+                                                                                style="margin: 39px 0px 0px -12px;"
+                                                                                name="call_ts" string="View">View
+                                                                            Samithi
+                                                                            Details
+                                                                        </button>
+                                                                    </left>
+                                                                </div>
+                                                            </tr>
+                                                        </table>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span t-attf-class="#{kanban_color(670)} oe_kanban_card ">
+                                            <div class="o_project_kanban_main"
+                                                 style="font-size:20px;width:300px;height:150px">
+                                                <div class="o_kanban_card_content" style="position:absolute;left:40px;"
+                                                     align="center">
+                                                    <center>
+                                                        <table>
+                                                            <tr>
+                                                                <center>
+                                                                    <b>
+                                                                        <span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 4px;">
+                                                                            PALAKKAD
+                                                                        </span>
+                                                                    </b>
+                                                                </center>
+                                                            </tr>
+                                                            <tr>
+                                                                <div>
+                                                                    <left>
+                                                                        <button class="your_custom_button" type="object"
+                                                                                style="margin: 39px 0px 0px -12px;"
+                                                                                name="call_pl" string="View">View
+                                                                            Samithi
+                                                                            Details
+                                                                        </button>
+                                                                    </left>
+                                                                </div>
+                                                            </tr>
+                                                        </table>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span t-attf-class="#{kanban_color(676)} oe_kanban_card ">
+                                            <div class="o_project_kanban_main"
+                                                 style="font-size:20px;width:300px;height:150px">
+                                                <div class="o_kanban_card_content" style="position:absolute;left:40px;"
+                                                     align="center">
+                                                    <center>
+                                                        <table>
+                                                            <tr>
+                                                                <center>
+                                                                    <b>
+                                                                        <span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 7px;">
+                                                                            MALAPPURAM
+                                                                        </span>
+                                                                    </b>
+                                                                </center>
+                                                            </tr>
+                                                            <tr>
+                                                                <div>
+                                                                    <left>
+                                                                        <button class="your_custom_button" type="object"
+                                                                                style="margin: 39px 0px 0px -12px;"
+                                                                                name="call_ma" string="View">View
+                                                                            Samithi
+                                                                            Details
+                                                                        </button>
+                                                                    </left>
+                                                                </div>
+                                                            </tr>
+                                                        </table>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr style="width:120px;">
+                                    <td>
+                                        <span t-attf-class="#{kanban_color(672)} oe_kanban_card ">
+                                            <div class="o_project_kanban_main"
+                                                 style="font-size:20px;width:325px;height:150px">
+                                                <div class="o_kanban_card_content" style="position:absolute;left:40px;"
+                                                     align="center">
+                                                    <center>
+                                                        <table>
+                                                            <tr>
+                                                                <center>
+                                                                    <b>
+                                                                        <span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 0px;">
+                                                                            KOZHIKODE
+                                                                        </span>
+                                                                    </b>
+                                                                </center>
+                                                            </tr>
+                                                            <tr>
+                                                                <div>
+                                                                    <left>
+                                                                        <button class="your_custom_button" type="object"
+                                                                                style="margin: 39px 0px 0px -12px;"
+                                                                                name="call_kz" string="View">View
+                                                                            Samithi
+                                                                            Details
+                                                                        </button>
+                                                                    </left>
+                                                                </div>
+                                                            </tr>
+                                                        </table>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span t-attf-class="#{kanban_color(673)} oe_kanban_card ">
+                                            <div class="o_project_kanban_main"
+                                                 style="font-size:20px;width:300px;height:150px">
+                                                <div class="o_kanban_card_content" style="position:absolute;left:40px;"
+                                                     align="center">
+                                                    <center>
+                                                        <table>
+                                                            <tr>
+                                                                <center>
+                                                                    <b>
+                                                                        <span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 10px;">
+                                                                            WAYANAD
+                                                                        </span>
+                                                                    </b>
+                                                                </center>
+                                                            </tr>
+                                                            <tr>
+                                                                <div>
+                                                                    <left>
+                                                                        <button class="your_custom_button" type="object"
+                                                                                style="margin: 39px 0px 0px -12px;"
+                                                                                name="call_wa" string="View">View
+                                                                            Samithi
+                                                                            Details
+                                                                        </button>
+                                                                    </left>
+                                                                </div>
+                                                            </tr>
+                                                        </table>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span t-attf-class="#{kanban_color(674)} oe_kanban_card ">
+                                            <div class="o_project_kanban_main"
+                                                 style="font-size:20px;width:300px;height:150px">
+                                                <div class="o_kanban_card_content" style="position:absolute;left:40px;"
+                                                     align="center">
+                                                    <center>
+                                                        <table>
+                                                            <tr>
+                                                                <center>
+                                                                    <b>
+                                                                        <span style="font-size: 16px;text-align: center;margin: 0px 14px 0px -2px;">
+                                                                            KANNUR
+                                                                        </span>
+                                                                    </b>
+                                                                </center>
+                                                            </tr>
+                                                            <tr>
+                                                                <div>
+                                                                    <left>
+                                                                        <button class="your_custom_button" type="object"
+                                                                                style="margin: 39px 0px 0px -12px;"
+                                                                                name="call_kn" string="View">View
+                                                                            Samithi
+                                                                            Details
+                                                                        </button>
+                                                                    </left>
+                                                                </div>
+                                                            </tr>
+                                                        </table>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span t-attf-class="#{kanban_color(675)} oe_kanban_card ">
+                                            <div class="o_project_kanban_main"
+                                                 style="font-size:20px;width:300px;height:150px">
+                                                <div class="o_kanban_card_content" style="position:absolute;left:40px;"
+                                                     align="center">
+                                                    <center>
+                                                        <table>
+                                                            <tr>
+                                                                <center>
+                                                                    <b>
+                                                                        <span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 12px;">
+                                                                            KASARAGOD
+                                                                        </span>
+                                                                    </b>
+                                                                </center>
+                                                            </tr>
+                                                            <tr>
+                                                                <div>
+                                                                    <left>
+                                                                        <button class="your_custom_button" type="object"
+                                                                                style="margin: 39px 0px 0px -12px;"
+                                                                                name="call_ks" string="View">View
+                                                                            Samithi
+                                                                            Details
+                                                                        </button>
+                                                                    </left>
+                                                                </div>
+                                                            </tr>
+                                                        </table>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span t-attf-class="#{kanban_color(675)} oe_kanban_card ">
+                                            <div class="o_project_kanban_main"
+                                                 style="font-size:20px;width:300px;height:150px">
+                                                <div class="o_kanban_card_content" style="position:absolute;left:40px;"
+                                                     align="center">
+                                                    <center>
+                                                        <table>
+                                                            <tr>
+                                                                <center>
+                                                                    <!--                                                                <b>-->
+                                                                    <!--                                                                    <span style="font-size: 16px;text-align: center;margin: 0px 14px 0px 12px;">-->
+                                                                    <!--                                                                        Administrator-->
+                                                                    <!--                                                                    </span>-->
+                                                                    <!--                                                                </b>-->
+                                                                </center>
+                                                            </tr>
+                                                            <tr>
+                                                                <div>
+                                                                    <left>
+                                                                        <!--                                                                    <button class="your_custom_button" type="object"-->
+                                                                        <!--                                                                            style="margin: 39px 0px 0px -12px;"-->
+                                                                        <!--                                                                            name="call_admin" string="View">View Samithi-->
+                                                                        <!--                                                                        Details-->
+                                                                        <!--                                                                    </button>-->
+                                                                    </left>
+                                                                </div>
+                                                            </tr>
+                                                        </table>
+                                                    </center>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="event_dashboard_form_view" model="ir.ui.view">
+            <field name="name">event.dashboard.form.view</field>
+            <field name="model">event.dashboard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="color"/>
+                        <field name="name"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_dashboard" model="ir.actions.act_window">
+            <field name="name">Sri Sathya Sai Org Kerala</field>
+            <field name="res_model">event.dashboard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="context">{}</field>
+            <field name="view_mode">kanban,form</field>
+        </record>
+
+
+        <menuitem id="menu_home" name="Home" sequence="1"/>
+        <menuitem id="submenu_home" parent="menu_home" name="Sathya Sai Events" sequence="1"/>
+        <menuitem id="sub_submenu_dashboard" parent="submenu_home" name="Sathya Sai Events" sequence="1"
+                  action="action_dashboard"/>
+    </data>
 </openerp>
