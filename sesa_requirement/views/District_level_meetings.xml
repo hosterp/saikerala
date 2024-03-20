@@ -35,7 +35,7 @@
         </record>
 
         <record id="action_district_level_activity" model="ir.actions.act_window">
-            <field name="name">District level meetings</field>
+            <field name="name">District Level meetings</field>
             <field name="res_model">event.district</field>
             <field name="type">ir.actions.act_window</field>
             <field name="view_type">form</field>

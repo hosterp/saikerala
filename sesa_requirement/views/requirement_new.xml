@@ -78,15 +78,34 @@
             <field name="priority">1</field>
             <field name="arch" type="xml">
                 <tree fg_color="green:state == 'completed'" search_view_id="search_med_lot_filter">
-                    <field name="user"/>
+                    <field name="event_place"/>
                     <field name="reporting_incharge"/>
                     <field name="event_category"/>
                     <field name="event_type"/>
                     <field name="date"/>
-                    <field name="event_place"/>
                     <field name="total_attendees"/>
                     <field name="total_devotees_attended"/>
                     <field name="event_district"/>
+                     <field name="user"/>
+                    <!-- Other fields -->
+                </tree>
+            </field>
+        </record>
+        <record id="tree_event_view_id" model="ir.ui.view">
+            <field name="name">Tree model for event</field>
+            <field name="model">event.event</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree create="0" fg_color="green:state == 'completed'" search_view_id="search_med_lot_filter">
+                    <field name="event_place"/>
+                    <field name="reporting_incharge"/>
+                    <field name="event_category"/>
+                    <field name="event_type"/>
+                    <field name="date"/>
+                    <field name="total_attendees"/>
+                    <field name="total_devotees_attended"/>
+                    <field name="event_district"/>
+                    <field name="user"/>
                     <!-- Other fields -->
                 </tree>
             </field>
@@ -113,6 +132,31 @@
         </record>
 
         <record id="action_event" model="ir.actions.act_window">
+            <field name="name">Event</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">event.event</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,search</field>
+            <field name="view_id" ref="tree_event_view_id"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a request for quotation.
+                </p>
+                <p>
+                    The quotation contains the history of the discussion/negotiation
+                    you had with your supplier. Once confirmed, a request for
+                    quotation
+                    is converted into a purchase order.
+                </p>
+                <p>
+                    Most propositions of purchase orders are created automatically
+                    by
+                    based on inventory needs.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_event_id" model="ir.actions.act_window">
             <field name="name">Event</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">event.event</field>
@@ -217,7 +261,7 @@
                                 <field name="revived_samithi"/>
                                 <field name="event_district"/>
                                 <field name="event_place"/>
-                                <field name="total_attendees"/>
+                                <field name="total_attendees" />
                                 <field name="total_devotees_attended"/>
                                 <field name="attachment" widget="many2many_binary" string="Attachment(s)"/>
                                 <!--                                  <group><field name="time"></field></group>-->
@@ -343,12 +387,13 @@
         </record>
 
 
+
         <menuitem id="menu_activity" name="Activity" sequence="2"/>
         <menuitem id="submenu_activity" parent="menu_activity" name="Activity" sequence="2"/>
         <menuitem id="sub_submenu_event" parent="submenu_activity" name="All Event Details" sequence="2"
                   action="action_event"/>
         <menuitem id="sub_submenu_event_activity" parent="submenu_activity" name="Activity" sequence="2"
-                  action="action_event"/>
+                  action="action_event_id"/>
 
 
         <!--        <menuitem id="sub_submenu_reports" parent="submenu_activity" name="Reports" sequence="4" action="action_expense"/>-->
