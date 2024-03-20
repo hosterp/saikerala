@@ -78,15 +78,15 @@
             <field name="priority">1</field>
             <field name="arch" type="xml">
                 <tree fg_color="green:state == 'completed'" search_view_id="search_med_lot_filter">
+                    <field name="date"/>
+                    <field name="event_district"/>
                     <field name="event_place"/>
-                    <field name="reporting_incharge"/>
                     <field name="event_category"/>
                     <field name="event_type"/>
-                    <field name="date"/>
+                    <field name="reporting_incharge"/>
                     <field name="total_attendees"/>
                     <field name="total_devotees_attended"/>
-                    <field name="event_district"/>
-                     <field name="user"/>
+                    <field name="user"/>
                     <!-- Other fields -->
                 </tree>
             </field>
@@ -97,16 +97,15 @@
             <field name="priority">1</field>
             <field name="arch" type="xml">
                 <tree  create="0" fg_color="green:state == 'completed'" search_view_id="search_med_lot_filter">
+                   <field name="date"/>
+                    <field name="event_district"/>
                     <field name="event_place"/>
-                    <field name="reporting_incharge"/>
                     <field name="event_category"/>
                     <field name="event_type"/>
-                    <field name="date"/>
+                    <field name="reporting_incharge"/>
                     <field name="total_attendees"/>
                     <field name="total_devotees_attended"/>
-                    <field name="event_district"/>
                     <field name="user"/>
-                    <!-- Other fields -->
                 </tree>
             </field>
         </record>
