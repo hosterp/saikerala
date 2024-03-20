@@ -56,7 +56,7 @@
         </record>
 
         <!-- Menu Item -->
-        <menuitem id="sub_balvikas_activity" parent="submenu_activity" name="Balvikas Details" sequence="4"
-                  action="action_balvikas_activity_new"/>
+<!--        <menuitem id="sub_balvikas_activity" parent="submenu_activity" name="Balvikas Details" sequence="4"-->
+<!--                  action="action_balvikas_activity_new"/>-->
     </data>
 </openerp>
