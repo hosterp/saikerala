@@ -556,6 +556,7 @@
                     <group>
                         <field name="color"/>
                         <field name="name"/>
+                        <field name="image_kanban"/>
                     </group>
                 </form>
             </field>
