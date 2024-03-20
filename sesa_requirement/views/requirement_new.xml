@@ -96,7 +96,7 @@
             <field name="model">event.event</field>
             <field name="priority">1</field>
             <field name="arch" type="xml">
-                <tree create="0" fg_color="green:state == 'completed'" search_view_id="search_med_lot_filter">
+                <tree  fg_color="green:state == 'completed'" search_view_id="search_med_lot_filter">
                     <field name="event_place"/>
                     <field name="reporting_incharge"/>
                     <field name="event_category"/>
