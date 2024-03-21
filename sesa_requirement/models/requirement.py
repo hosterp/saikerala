@@ -62,6 +62,7 @@ class Event(models.Model):
     guru = fields.Integer(string="Guru")
     event_category = fields.Selection([
         ('balvikas', 'Balvikas'),
+        ('services', 'Services'),
         ('education', 'Education'),
         ('spiritual', 'Spiritual'),
         ('mahila', 'Mahila'),
