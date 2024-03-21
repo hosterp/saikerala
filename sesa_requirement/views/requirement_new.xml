@@ -96,8 +96,8 @@
             <field name="model">event.event</field>
             <field name="priority">1</field>
             <field name="arch" type="xml">
-                <tree  create="0" fg_color="green:state == 'completed'" search_view_id="search_med_lot_filter">
-                   <field name="date"/>
+                <tree create="0" fg_color="green:state == 'completed'" search_view_id="search_med_lot_filter">
+                    <field name="date"/>
                     <field name="event_district"/>
                     <field name="event_place"/>
                     <field name="event_category"/>
@@ -161,7 +161,7 @@
             <field name="res_model">event.event</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form,search</field>
-              <field name="view_id" ref="tree_event_view"/>
+            <field name="view_id" ref="tree_event_view"/>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
                     Click to create a request for quotation.
@@ -249,20 +249,23 @@
                         <group>
                             <group>
                                 <field name="user"/>
-                                <field name="reporting_incharge"/>
-                                <!--                                <field name="event_category" widget="radio"/>-->
-                                <field name="event_category" widget="radio"/>
+                                <field name="date"/>
+                                <field name="event_place"/>
                                 <field name="event_type"/>
+                                <!--                                <field name="event_category" widget="radio"/>-->
+
+
                                 <field name="contact_details" string="Phone Number"/>
-                                <field name="guru" string="Guru" attrs="{'invisible': [('event_category', '!=', 'balvikas')]}"/>
+                                <field name="total_devotees_attended"/>
+                                <field name="revived_samithi"/>
+                                <field name="guru" string="Guru"
+                                       attrs="{'invisible': [('event_category', '!=', 'balvikas')]}"/>
                             </group>
                             <group>
-                                <field name="date"/>
-                                <field name="revived_samithi"/>
+                                <field name="reporting_incharge"/>
                                 <field name="event_district"/>
-                                <field name="event_place"/>
-                                <field name="total_attendees" />
-                                <field name="total_devotees_attended"/>
+                                <field name="event_category" widget="radio"/>
+                                <field name="total_attendees" invisible="1"/>
                                 <field name="attachment" widget="many2many_binary" string="Attachment(s)"/>
                                 <!--                                  <group><field name="time"></field></group>-->
                             </group>
@@ -384,7 +387,6 @@
                 </form>
             </field>
         </record>
-
 
 
         <menuitem id="menu_activity" name="Activity" sequence="2"/>
