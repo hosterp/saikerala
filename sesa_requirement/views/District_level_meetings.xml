@@ -6,30 +6,31 @@
             <field name="model">event.district</field>
             <field name="arch" type="xml">
                 <form string="Event District Level">
-<!--                    <header>-->
-<!--                        <button name="print_District_level_details_report_xlsx_report" string="Print xlsx"-->
-<!--                                type="object"/>-->
-<!--                    </header>-->
+                    <!--                    <header>-->
+                    <!--                        <button name="print_District_level_details_report_xlsx_report" string="Print xlsx"-->
+                    <!--                                type="object"/>-->
+                    <!--                    </header>-->
 
-                    <sheet>
+                    <group>
+                         <group>
+                            <field name="date"/>
+                            <field name="no_saplings" style="width:300px"/>
+                            <field name="missing_activities"
+                                   string="No of samithies which added missing activities"
+                                   help="Specify the number of samithies which added missing activities like Nagarasankeerthan, Balvikas, etc..." style="width:300px"/>
 
-                            <group>
-                                <field name="date" style="width:50%"/>
-                                <field name="no_monthily_meeting" style="width:50%"/>
-                                <field name="no_family" style="width:50%"/>
 
-
-                                <field name="no_saplings"/>
-                                <field name="missing_activities"
-                                       string="No of samithies which added missing activities"
-                                       help="Specify the number of samithies which added missing activities like Nagarasankeerthan, Balvikas, etc...">
-                                </field>
-                                <field name="events_planned" colspan="2"/>
-                                <field name="remark" />
-                            </group>
-
-                    </sheet>
-
+                        </group>
+                        <group>
+                            <field name="event_district" string="District" style="width:125px"/>
+                            <field name="no_monthily_meeting" style="width:125px"/>
+                            <field name="no_family" style="width:125px"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="events_planned" style="width:700px"/>
+                        <field name="remark" style="width:700px"/>
+                    </group>
                 </form>
             </field>
         </record>
@@ -54,7 +55,7 @@
                 </tree>
             </field>
         </record>
-          <report id="report_district_details_excel_id"
+        <report id="report_district_details_excel_id"
                 model="event.district"
                 string="District Level Meeting Report Excel"
                 report_type="xlsx"
