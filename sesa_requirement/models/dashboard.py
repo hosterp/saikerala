@@ -8,6 +8,17 @@ class HRDashboard(models.Model):
     color = fields.Integer(string='Color Index')
     name = fields.Char(string="Name")
     image_kanban=fields.Binary('Image')
+    place_count = fields.Integer(string='Place Count', compute='get_place_count_from_event_place')
+
+    @api.depends('place_count')
+    @api.one
+    def get_place_count_from_event_place(self):
+        event_place_model = self.env['event.place']
+        place_record = event_place_model.search([], limit=1)
+        self.place_count = place_record.place_count if place_record else 0
+
+
+
     def call_place(self,cr,uid,ids,context):
     	mod_obj = self.pool.get('ir.model.data')
     	act_obj = self.pool.get('ir.actions.act_window')

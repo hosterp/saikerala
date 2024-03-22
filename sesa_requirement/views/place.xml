@@ -66,12 +66,11 @@
                         <field name="date"/>
                         <field name="place"/>
                         <field name="event_district"/>
-
+<!--                        <field name="place_count" string="Count"/>-->
                     </group>
                 </form>
             </field>
         </record>
-
         <record id="action_dashboard_places" model="ir.actions.act_window">
             <!--		    <field name="name">Place</field>-->
             <field name="name">THIRUVANANTHAPURAM</field>

@@ -161,6 +161,17 @@ class Place(models.Model):
                                        ('WA', 'WAYANAD')])
 
     date=fields.Date(default=fields.Date.today,required='True')
+    place_count = fields.Integer(string='Place Count', compute='_compute_place_count')
+
+
+
+    @api.depends('place')
+    def _compute_place_count(self):
+        for record in self:
+            places = self.env['event.place'].search([])
+            record.place_count = len(places)
+            print(record.place_count, 'count.........................')
+
 
     def call_event(self, cr, uid, ids, context):
         mod_obj = self.pool.get('ir.model.data')
