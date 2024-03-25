@@ -140,12 +140,14 @@ class EventExpenses(models.Model):
 #     date_event = fields.Date("Date of event") 
 
 
+
+
 class Place(models.Model):
     _name = 'event.place'
     _rec_name = 'place'
 
     place = fields.Char('Place')
-    event_district = fields.Selection([('AL', 'AALAPUZHA'),
+    event_district = fields.Selection([('AL', 'ALAPPUZHA'),
                                        ('ER', 'ERNAKULAM'),
                                        ('ID', 'IDUKKI'),
                                        ('KN', 'KANNUR'),
@@ -162,7 +164,61 @@ class Place(models.Model):
 
     date=fields.Date(default=fields.Date.today,required='True')
     place_count = fields.Integer(string='Place Count', compute='_compute_place_count')
+    district_place_count = fields.Integer(string='Place Count',compute='_compute_district_wise_count_place')
 
+    @api.depends('event_district')
+    def _compute_district_wise_count_place(self):
+        for rec in self:
+            if rec.event_district == 'TV':
+                places = self.env['event.place'].search([('event_district', '=', 'TV')])
+                rec.district_place_count= len(places)
+
+            if rec.event_district == 'AL':
+                places = self.env['event.place'].search([('event_district', '=', 'AL')])
+                rec.district_place_count = len(places)
+
+            if rec.event_district == 'ER':
+                places = self.env['event.place'].search([('event_district', '=', 'ER')])
+                rec.district_place_count = len(places)
+
+            if rec.event_district == 'ID':
+                places = self.env['event.place'].search([('event_district', '=', 'ID')])
+                rec.district_place_count = len(places)
+
+            if rec.event_district == 'KN':
+                places = self.env['event.place'].search([('event_district', '=', 'KN')])
+                rec.district_place_count = len(places)
+            if rec.event_district == 'KS':
+                places = self.env['event.place'].search([('event_district', '=', 'KS')])
+                rec.district_place_count = len(places)
+
+            if rec.event_district == 'KL':
+                places = self.env['event.place'].search([('event_district', '=', 'KL')])
+                rec.district_place_count = len(places)
+            if rec.event_district == 'KT':
+                places = self.env['event.place'].search([('event_district', '=', 'KT')])
+                rec.district_place_count = len(places)
+            if rec.event_district == 'KZ':
+                places = self.env['event.place'].search([('event_district', '=', 'KZ')])
+                rec.district_place_count = len(places)
+            if rec.event_district == 'MA':
+                places = self.env['event.place'].search([('event_district', '=', 'MA')])
+                rec.district_place_count = len(places)
+            if rec.event_district == 'PL':
+                places = self.env['event.place'].search([('event_district', '=', 'PL')])
+                rec.district_place_count = len(places)
+            if rec.event_district == 'PT':
+                places = self.env['event.place'].search([('event_district', '=', 'PT')])
+                rec.district_place_count = len(places)
+            if rec.event_district == 'TV':
+                places = self.env['event.place'].search([('event_district', '=', 'TV')])
+                rec.district_place_count = len(places)
+            if rec.event_district == 'TS':
+                places = self.env['event.place'].search([('event_district', '=', 'TS')])
+                rec.district_place_count = len(places)
+            if rec.event_district == 'WA':
+                places = self.env['event.place'].search([('event_district', '=', 'WA')])
+                rec.district_place_count = len(places)
 
 
     @api.depends('place')

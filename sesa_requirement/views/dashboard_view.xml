@@ -331,7 +331,7 @@
                                         </span>
                                     </td>
                                     <td>
-                                        <span t-attf-class="#{kanban_color(670)} oe_kanban_card ">
+                                        <span t-attf-class="#{kanban_color(661)} oe_kanban_card ">
                                             <div class="o_project_kanban_main"
                                                  style="font-size:20px;width:300px;height:150px">
                                                 <div class="o_kanban_card_content" style="position:absolute;left:40px;"

@@ -2,6 +2,9 @@ from openerp import fields, models, api
 from datetime import date
 from datetime import  datetime,timedelta
 
+from openerp.exceptions import ValidationError
+
+
 class HRDashboard(models.Model):
     _name = 'event.dashboard'
 
@@ -20,7 +23,11 @@ class HRDashboard(models.Model):
 
 
     def call_place(self,cr,uid,ids,context):
-    	mod_obj = self.pool.get('ir.model.data')
+        place_obj = self.pool.get('event.place')
+        places = place_obj.search(cr, uid, [('event_district', '=', 'TV')], context=context)
+        tvm_place_count = len(places)
+        print(tvm_place_count,'count................')
+        mod_obj = self.pool.get('ir.model.data')
     	act_obj = self.pool.get('ir.actions.act_window')
     	result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places')
     	id = result and result[1] or False
@@ -29,6 +36,10 @@ class HRDashboard(models.Model):
 
 
     def call_pta(self,cr,uid,ids,context):
+        place_obj = self.pool.get('event.place')
+        places = place_obj.search(cr, uid, [('event_district', '=', 'PT')], context=context)
+        tvm_place_count = len(places)
+        print(tvm_place_count, 'count................')
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_pta')
@@ -38,6 +49,10 @@ class HRDashboard(models.Model):
 
 
     def call_kollam(self,cr,uid,ids,context):
+        place_obj = self.pool.get('event.place')
+        places = place_obj.search(cr, uid, [('event_district', '=', 'KL')], context=context)
+        tvm_place_count = len(places)
+        print(tvm_place_count, 'count................')
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_kl')
@@ -46,6 +61,10 @@ class HRDashboard(models.Model):
         return result
 
     def call_al(self,cr,uid,ids,context):
+        place_obj = self.pool.get('event.place')
+        places = place_obj.search(cr, uid, [('event_district', '=', 'AL')], context=context)
+        tvm_place_count = len(places)
+        print(tvm_place_count, 'count................')
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_al')
@@ -54,6 +73,10 @@ class HRDashboard(models.Model):
         return result
 
     def call_er(self,cr,uid,ids,context):
+        place_obj = self.pool.get('event.place')
+        places = place_obj.search(cr, uid, [('event_district', '=', 'ER')], context=context)
+        tvm_place_count = len(places)
+        print(tvm_place_count, 'count................')
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_er')
@@ -62,6 +85,10 @@ class HRDashboard(models.Model):
         return result
 
     def call_id(self,cr,uid,ids,context):
+        place_obj = self.pool.get('event.place')
+        places = place_obj.search(cr, uid, [('event_district', '=', 'ID')], context=context)
+        tvm_place_count = len(places)
+        print(tvm_place_count, 'count................')
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_id')
@@ -70,6 +97,10 @@ class HRDashboard(models.Model):
         return result
 
     def call_ks(self,cr,uid,ids,context):
+        place_obj = self.pool.get('event.place')
+        places = place_obj.search(cr, uid, [('event_district', '=', 'KS')], context=context)
+        tvm_place_count = len(places)
+        print(tvm_place_count, 'count................')
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_ks')
@@ -78,6 +109,10 @@ class HRDashboard(models.Model):
         return result
 
     def call_kt(self,cr,uid,ids,context):
+        place_obj = self.pool.get('event.place')
+        places = place_obj.search(cr, uid, [('event_district', '=', 'KT')], context=context)
+        tvm_place_count = len(places)
+        print(tvm_place_count, 'count................')
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_kt')
@@ -86,6 +121,10 @@ class HRDashboard(models.Model):
         return result
 
     def call_kz(self,cr,uid,ids,context):
+        place_obj = self.pool.get('event.place')
+        places = place_obj.search(cr, uid, [('event_district', '=', 'KZ')], context=context)
+        tvm_place_count = len(places)
+        print(tvm_place_count, 'count................')
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_kz')
@@ -94,6 +133,10 @@ class HRDashboard(models.Model):
         return result
 
     def call_ma(self,cr,uid,ids,context):
+        place_obj = self.pool.get('event.place')
+        places = place_obj.search(cr, uid, [('event_district', '=', 'MA')], context=context)
+        tvm_place_count = len(places)
+        print(tvm_place_count, 'count................')
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_ma')
@@ -102,6 +145,10 @@ class HRDashboard(models.Model):
         return result
 
     def call_pl(self,cr,uid,ids,context):
+        place_obj = self.pool.get('event.place')
+        places = place_obj.search(cr, uid, [('event_district', '=', 'PL')], context=context)
+        tvm_place_count = len(places)
+        print(tvm_place_count, 'count................')
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_pl')
@@ -110,6 +157,10 @@ class HRDashboard(models.Model):
         return result
 
     def call_ts(self,cr,uid,ids,context):
+        place_obj = self.pool.get('event.place')
+        places = place_obj.search(cr, uid, [('event_district', '=', 'TS')], context=context)
+        tvm_place_count = len(places)
+        print(tvm_place_count, 'count................')
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_ts')
@@ -118,6 +169,10 @@ class HRDashboard(models.Model):
         return result
 
     def call_wa(self,cr,uid,ids,context):
+        place_obj = self.pool.get('event.place')
+        places = place_obj.search(cr, uid, [('event_district', '=', 'WA')], context=context)
+        tvm_place_count = len(places)
+        print(tvm_place_count, 'count................')
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_wa')
@@ -126,6 +181,10 @@ class HRDashboard(models.Model):
         return result
     
     def call_kn(self,cr,uid,ids,context):
+        place_obj = self.pool.get('event.place')
+        places = place_obj.search(cr, uid, [('event_district', '=', 'KN')], context=context)
+        tvm_place_count = len(places)
+        print(tvm_place_count, 'count................')
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_kn')
