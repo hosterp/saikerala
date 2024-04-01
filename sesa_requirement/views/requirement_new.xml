@@ -247,11 +247,15 @@
                     </header>
                     <sheet>
                         <group>
+                             <field name="date"/>
+                        </group>
+                        <group>
                             <group>
                                 <field name="user"/>
-                                <field name="date"/>
-                                <field name="event_place"/>
-                                <field name="event_type"/>
+                                <field name="event_category" widget="radio"/>
+
+
+
                                 <!--                                <field name="event_category" widget="radio"/>-->
 
 
@@ -263,8 +267,9 @@
                             </group>
                             <group>
                                 <field name="reporting_incharge"/>
-                                <field name="event_district"/>
-                                <field name="event_category" widget="radio"/>
+                                 <field name="event_type"/>
+                                 <field name="event_district"/>
+                                  <field name="event_place"/>
                                 <field name="total_attendees" invisible="1"/>
                                 <field name="attachment" widget="many2many_binary" string="Attachment(s)"/>
                                 <!--                                  <group><field name="time"></field></group>-->

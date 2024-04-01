@@ -44,7 +44,7 @@ class Event(models.Model):
                                        ('TV', 'THIRUVANANTHAPURAM'),
                                        ('TS', 'THRISSUR'),
                                        ('WA', 'WAYANAD')])
-    # event_category = fields.Many2one('event.category', "Event Category")
+    event_category = fields.Many2one('event.category', "Event Category")
     event_type = fields.Many2one('event.type')
     total_attendees = fields.Integer("Total Attendees")
     total_devotees_attended = fields.Integer("Total devotees attended")
@@ -60,14 +60,14 @@ class Event(models.Model):
     revived_samithi=fields.Boolean(string="Revived Samithi")
     time = fields.Float(string="Time")
     guru = fields.Integer(string="Guru")
-    event_category = fields.Selection([
-        ('balvikas', 'Balvikas'),
-        ('services', 'Services'),
-        ('education', 'Education'),
-        ('spiritual', 'Spiritual'),
-        ('mahila', 'Mahila'),
-        ('saiyouth', 'Sai Youth'),
-    ], string='Event Category')
+    # event_category = fields.Selection([
+    #     ('balvikas', 'Balvikas'),
+    #     ('services', 'Services'),
+    #     ('education', 'Education'),
+    #     ('spiritual', 'Spiritual'),
+    #     ('mahila', 'Mahila'),
+    #     ('saiyouth', 'Sai Youth'),
+    # ], string='Event Category')
     # category = fields.Boolean(string="Guru")
 
     # @api.onchange('event_category')
@@ -88,7 +88,7 @@ class Event(models.Model):
     def onchange_event_category(self):
         for record in self:
             if record.event_category:
-                return {'domain':{'event_type':[('event_category','=',record.event_category)]}}
+                return {'domain':{'event_type':[('event_category','=',record.event_category.id)]}}
 
 
 class Attachment(models.Model):
@@ -104,9 +104,12 @@ class EventCategory(models.Model):
 
     event_category = fields.Selection([
         ('balvikas', 'Balvikas'),
-        ('other_category', 'Other Category'),
+        ('services', 'Services'),
+        ('education', 'Education'),
+        ('spiritual', 'Spiritual'),
+        ('mahila', 'Mahila'),
+        ('saiyouth', 'Sai Youth'),
     ], string='Event Category')
-
 
 class EventType(models.Model):
     _name = 'event.type'

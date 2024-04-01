@@ -7,13 +7,14 @@ class ActivityReport(models.Model):
 
     date_from =fields.Date('Date From' ,required="True")
     date_to =fields.Date('Date To' ,required="True")
-    event_category = fields.Selection([
-        ('balvikas', 'Balvikas'),
-        ('education', 'Education'),
-        ('spiritual', 'Spiritual'),
-        ('mahila', 'Mahila'),
-        ('saiyouth', 'Sai Youth'),
-    ], string='Event Category')
+    # event_category = fields.Selection([
+    #     ('balvikas', 'Balvikas'),
+    #     ('education', 'Education'),
+    #     ('spiritual', 'Spiritual'),
+    #     ('mahila', 'Mahila'),
+    #     ('saiyouth', 'Sai Youth'),
+    # ], string='Event Category')
+    event_category = fields.Many2one('event.category', "Event Category")
     event_district = fields.Selection([('AL', 'ALAPPUZHA'),
                                        ('ER', 'ERNAKULAM'),
                                        ('ID', 'IDUKKI'),
@@ -181,6 +182,12 @@ class ActivityReport(models.Model):
                 ])
 
             return invoice_ids
+
+    @api.onchange('event_category')
+    def onchange_event_category(self):
+        for record in self:
+            if record.event_category:
+                return {'domain': {'event_type': [('event_category', '=', record.event_category.id)]}}
 
     @api.onchange('event_district')
     def onchange_event_district(self):

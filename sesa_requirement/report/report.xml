@@ -26,7 +26,7 @@
 
                         </group>
                         <group>
-                            <field name="event_type"  widget="radio"/>
+                            <field name="event_type"/>
                         </group>
 					</group>
 					<group>
@@ -110,7 +110,7 @@
                                                 <t t-esc="line.reporting_incharge.display_name"/>
                                             </td>
                                             <td style="border:1px solid black;">
-                                                <t t-esc="line.event_category"/>
+                                                <t t-esc="line.event_category.display_name"/>
                                             </td>
                                             <td style="border:1px solid black;">
                                                 <t t-esc="line.event_type.display_name"/>
