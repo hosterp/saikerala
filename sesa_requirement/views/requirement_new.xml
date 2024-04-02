@@ -84,7 +84,7 @@
                     <field name="event_category"/>
                     <field name="event_type"/>
                     <field name="reporting_incharge"/>
-                    <field name="total_attendees"/>
+                    <field name="total_attendees" invisible="1"/>
                     <field name="total_devotees_attended"/>
                     <field name="user"/>
                     <!-- Other fields -->
