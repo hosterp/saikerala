@@ -24,7 +24,28 @@ class DistrictLevelMeetings(models.Model):
                                        ('TV', 'THIRUVANANTHAPURAM'),
                                        ('TS', 'THRISSUR'),
                                        ('WA', 'WAYANAD')])
+    event_place = fields.Many2one('event.place', "Place")
+    male = fields.Integer(string='Male')
+    female = fields.Integer(string='Female')
+    youth = fields.Integer(string='Youth')
+    total_devotees_attended = fields.Integer("Total devotees attended", compute='_compute_total', store=True)
+    event_category = fields.Many2one('event.category', "Meeting Category")
+    event_type = fields.Many2one('event.type','Meeting Type')
+    @api.depends('male', 'female', 'youth')
+    def _compute_total(self):
+        for rec in self:
+            rec.total_devotees_attended = rec.male + rec.female + rec.youth
 
+    @api.onchange('event_district')
+    def onchange_event_district(self):
+        for record in self:
+            if record.event_district:
+                return {'domain': {'event_place': [('event_district', '=', record.event_district)]}}
+    @api.onchange('event_category')
+    def onchange_event_category(self):
+        for record in self:
+            if record.event_category:
+                return {'domain': {'event_type': [('event_category', '=', record.event_category.id)]}}
     @api.multi
     def print_activity_district_level_meeting_details_report(self):
         datas = {

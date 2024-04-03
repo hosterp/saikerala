@@ -80,7 +80,7 @@
                 <tree fg_color="green:state == 'completed'" search_view_id="search_med_lot_filter">
                     <field name="date"/>
                     <field name="event_district"/>
-                    <field name="event_place"/>
+                    <field name="event_place" string="Samithies"/>
                     <field name="event_category"/>
                     <field name="event_type"/>
                     <field name="reporting_incharge"/>
@@ -100,13 +100,14 @@
                 <tree create="0" fg_color="green:state == 'completed'" search_view_id="search_med_lot_filter">
                     <field name="date"/>
                     <field name="event_district"/>
-                    <field name="event_place"/>
+                    <field name="event_place" string="Samithies"/>
                     <field name="event_category"/>
                     <field name="event_type"/>
                     <field name="reporting_incharge"/>
                     <field name="total_attendees" invisible="1"/>
                     <field name="total_devotees_attended"/>
                     <field name="user"/>
+                    <field name="state"/>
                 </tree>
             </field>
         </record>
