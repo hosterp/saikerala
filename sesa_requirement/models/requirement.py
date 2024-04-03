@@ -47,7 +47,7 @@ class Event(models.Model):
     event_category = fields.Many2one('event.category', "Event Category")
     event_type = fields.Many2one('event.type')
     total_attendees = fields.Integer("Total Attendees")
-    total_devotees_attended = fields.Integer("Total devotees attended")
+    total_devotees_attended = fields.Integer("Total devotees attended", compute='_compute_total',store=True)
     advance = fields.Integer("Advance")
     expense = fields.Integer("Expense")
     balance = fields.Integer("Balance")
@@ -60,6 +60,14 @@ class Event(models.Model):
     revived_samithi=fields.Boolean(string="Revived Samithi")
     time = fields.Float(string="Time")
     guru = fields.Integer(string="Guru")
+    male=fields.Integer(string='Male')
+    female=fields.Integer(string='Female')
+    youth=fields.Integer(string='Youth')
+
+    @api.depends('male','female','youth')
+    def _compute_total(self):
+        for rec in self:
+            rec.total_devotees_attended=rec.male+rec.female+rec.youth
     # event_category = fields.Selection([
     #     ('balvikas', 'Balvikas'),
     #     ('services', 'Services'),

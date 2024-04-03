@@ -87,6 +87,7 @@
                     <field name="total_attendees" invisible="1"/>
                     <field name="total_devotees_attended"/>
                     <field name="user"/>
+                    <field name="state"/>
                     <!-- Other fields -->
                 </tree>
             </field>
@@ -247,7 +248,7 @@
                     </header>
                     <sheet>
                         <group>
-                             <field name="date"/>
+                            <field name="date"/>
                         </group>
                         <group>
                             <group>
@@ -255,21 +256,16 @@
                                 <field name="event_category" widget="radio"/>
 
 
-
                                 <!--                                <field name="event_category" widget="radio"/>-->
 
 
                                 <field name="contact_details" string="Phone Number"/>
-                                <field name="total_devotees_attended"/>
-                                <field name="revived_samithi"/>
-                                <field name="guru" string="Guru"
-                                       attrs="{'invisible': [('event_category', '!=', 'balvikas')]}"/>
                             </group>
                             <group>
                                 <field name="reporting_incharge"/>
-                                 <field name="event_type"/>
-                                 <field name="event_district"/>
-                                  <field name="event_place"/>
+                                <field name="event_type"/>
+                                <field name="event_district"/>
+                                <field name="event_place"/>
                                 <field name="total_attendees" invisible="1"/>
                                 <field name="attachment" widget="many2many_binary" string="Attachment(s)"/>
                                 <!--                                  <group><field name="time"></field></group>-->
@@ -285,6 +281,24 @@
                             <!--                            <group>-->
                             <!--                                <field name="rem_expense" />-->
                             <!--                            </group>-->
+                        </group>
+                        <group col="3">
+                            <group>
+                                <field name="male"/>
+                            </group>
+                            <group>
+                                <field name="female"/>
+                            </group>
+                            <group>
+                                <field name="youth"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <field name="total_devotees_attended"/>
+                            <field name="revived_samithi"/>
+                            <field name="guru" string="Guru"
+                                   attrs="{'invisible': [('event_category', '!=', 'balvikas')]}"/>
                         </group>
                         <group>
                             <!--                            <field name="balance" />-->

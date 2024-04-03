@@ -16,6 +16,7 @@
                   parent="hr.menu_hr_main"
                   name="Devotees Data"/>
 
+
         <record id="make_invisible" model="res.groups">
             <field name="name">Invisible</field>
         </record>

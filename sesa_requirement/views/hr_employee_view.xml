@@ -209,5 +209,45 @@
         </record>
 
 
+         <record model="ir.ui.view" id="search_med_lot_filter_devotees_samithies">
+            <field name="name">Devotees Filter Search</field>
+            <field name="model">hr.employee</field>
+            <field name="arch" type="xml">
+                <search string="samithies Filter">
+                    <field name="event_place" string="Place"/>
+                     <field name="event_district" string="District"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Place" icon="terp-accessories-archiver" domain="[]"
+                                context="{'group_by':'event_place'}"/>
+                         <filter string="District" icon="terp-accessories-archiver" domain="[]"
+                                context="{'group_by':'event_district'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record id="hr.open_view_employee_list_my_tree" model="ir.actions.act_window">
+            <field name="name">Samithies Data</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="view_id" ref="view_employee_tree_inherit"/>
+            <field name="search_view_id" ref="search_med_lot_filter_devotees_samithies"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to add a new employee.
+                </p>
+                <p>
+                    With just a quick glance on the Odoo employee screen, you
+                    can easily find all the information you need for each person;
+                    contact data, job position, availability, etc.
+                </p>
+            </field>
+        </record>
+
+        <menuitem action="hr.open_view_employee_list_my_tree" id="hr.menu_open_view_employee_list_my_tree" sequence="3"
+                  parent="hr.menu_hr_main" name="Samithies Data"/>
+
     </data>
 </openerp>
