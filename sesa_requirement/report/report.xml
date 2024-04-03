@@ -85,11 +85,11 @@
                                         <th style="border:1px solid black;">Event Category</th>
                                         <th style="border:1px solid black;">Event type</th>
                                         <th style="border:1px solid black;" >Date of event</th>
-                                        <th style="border:1px solid black;">Place</th>
-                                        <th style="border:1px solid black;">Total Attendees</th>
+                                        <th style="border:1px solid black;">Samithies</th>
+<!--                                        <th style="border:1px solid black;">Total Attendees</th>-->
                                         <th style="border:1px solid black;">Total devotees attended</th>
-                                        <th style="border:1px solid black;">Details</th>
-                                        <th style="border:1px solid black;">Remark</th>
+<!--                                        <th style="border:1px solid black;">Details</th>-->
+<!--                                        <th style="border:1px solid black;">Remark</th>-->
                                         <th style="border:1px solid black;">Status</th>
                                         <!-- Add other table headers here -->
                                     </tr>
@@ -121,21 +121,23 @@
                                             <td style="border:1px solid black;">
                                                 <t t-esc="line.event_place.display_name"/>
                                             </td>
-                                            <td style="border:1px solid black;">
-                                                <t t-esc="line.total_attendees"/>
-                                            </td>
+<!--                                            <td style="border:1px solid black;">-->
+<!--                                                <t t-esc="line.total_attendees"/>-->
+<!--                                            </td>-->
                                             <td style="border:1px solid black;">
                                                 <t t-esc="line.total_devotees_attended"/>
                                             </td>
-                                            <td style="border:1px solid black;">
-                                                <t t-esc="line.desc"/>
-                                            </td>
-                                            <td style="border:1px solid black;">
-                                                <t t-esc="line.remark"/>
-                                            </td>
-                                            <td style="border:1px solid black;">
+                                              <td style="border:1px solid black;">
                                                 <t t-esc="line.state"/>
                                             </td>
+<!--                                            <td style="border:1px solid black;">-->
+<!--                                                <t t-esc="line.desc"/>-->
+<!--                                            </td>-->
+
+<!--                                            <td style="border:1px solid black;">-->
+<!--                                                <t t-esc="line.remark"/>-->
+<!--                                            </td>-->
+
                                         </tr>
                                     </t>
                                 </tbody>
