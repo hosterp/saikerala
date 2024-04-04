@@ -14,7 +14,7 @@
                   id="hr.menu_open_view_employee_list_my"
                   sequence="3"
                   parent="hr.menu_hr_main"
-                  name="Devotees Data"/>
+                  name="Devotees District Data"/>
 
 
         <record id="make_invisible" model="res.groups">

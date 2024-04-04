@@ -266,7 +266,7 @@
                                 <field name="reporting_incharge"/>
                                 <field name="event_type"/>
                                 <field name="event_district"/>
-                                <field name="event_place"/>
+                                <field name="event_place" string="Samithi"/>
                                 <field name="total_attendees" invisible="1"/>
                                 <field name="attachment" widget="many2many_binary" string="Attachment(s)"/>
                                 <!--                                  <group><field name="time"></field></group>-->

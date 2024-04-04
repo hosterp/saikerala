@@ -247,7 +247,7 @@
         </record>
 
         <menuitem action="hr.open_view_employee_list_my_tree" id="hr.menu_open_view_employee_list_my_tree" sequence="3"
-                  parent="hr.menu_hr_main" name="Samithies Data"/>
+                  parent="hr.menu_hr_main" name="Samithi Wise Data"/>
 
     </data>
 </openerp>

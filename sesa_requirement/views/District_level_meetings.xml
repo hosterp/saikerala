@@ -33,15 +33,15 @@
                         </group>
 
                     </group>
-                    <group col="2">
-                        <group>
-                              <field name="event_category" widget="radio"/>
-                        </group>
-                      <group>
-                           <field name="event_type"/>
-                      </group>
+<!--                    <group col="2">-->
+<!--                        <group>-->
+<!--                              <field name="event_category" widget="radio"/>-->
+<!--                        </group>-->
+<!--                      <group>-->
+<!--                           <field name="event_type"/>-->
+<!--                      </group>-->
 
-                    </group>
+<!--                    </group>-->
                     <group col="4">
 
                                 <group>
