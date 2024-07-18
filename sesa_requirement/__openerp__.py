@@ -18,6 +18,7 @@
             'report/samithi_details_report.xml',
             'report/bhajan_mandali_report.xml',
             'report/Balvikas_details_report.xml',
+            'report/centenary_report.xml',
             'views/revived_samithi.xml',
             'views/District_level_meetings.xml',
             'views/Balvikas_details.xml',
