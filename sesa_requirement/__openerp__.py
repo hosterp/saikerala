@@ -21,6 +21,8 @@
             'views/revived_samithi.xml',
             'views/District_level_meetings.xml',
             'views/Balvikas_details.xml',
+            'views/centenary_celebration.xml',
+            'views/centenary_form.xml',
     ],
     # 'css': [
     #     "static/src/css/styles.css",
