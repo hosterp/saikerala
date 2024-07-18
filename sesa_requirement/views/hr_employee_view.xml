@@ -215,7 +215,7 @@
             <field name="arch" type="xml">
                 <search string="samithies Filter">
                     <field name="event_place" string="Place"/>
-                     <field name="event_district" sCategorytring="District"/>
+                     <field name="event_district" string="District"/>
                     <group expand="0" string="Group By">
                         <filter string="Place" icon="terp-accessories-archiver" domain="[]"
                                 context="{'group_by':'event_place'}"/>
