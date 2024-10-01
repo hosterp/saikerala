@@ -24,4 +24,12 @@ $(document).ready(function () {
             }
         }
     });
+    $(document).on('keydown', function(e) { 
+        if (e.key === 'Enter') {
+            if ($('.ui-datepicker').is(':visible')) {
+                $('.ui-datepicker').hide();
+            }
+        }
+    });
+
 });
