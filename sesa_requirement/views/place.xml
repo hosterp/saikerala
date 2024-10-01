@@ -103,7 +103,7 @@
 
         <record id="action_dashboard_places_al" model="ir.actions.act_window">
             <!--		    <field name="name">Place</field>-->
-            <field name="name">ALAPUZHA</field>
+            <field name="name">ALAPPUZHA</field>
             <field name="res_model">event.place</field>
             <field name="type">ir.actions.act_window</field>
             <field name="view_type">form</field>

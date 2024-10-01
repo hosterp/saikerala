@@ -30,10 +30,10 @@ class HRDashboard(models.Model):
         mod_obj = self.pool.get('ir.model.data')
     	act_obj = self.pool.get('ir.actions.act_window')
     	result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places')
-    	id = result and result[1] or False
-    	result = act_obj.read(cr, uid, [id], context=context)[0]
-    	return result
-
+        action_id = result and result[1] or False
+        result = act_obj.read(cr, uid, [action_id], context=context)[0]
+        result['name'] = "THIRUVANANTHAPURAM ({})".format(tvm_place_count)
+        return result
 
     def call_pta(self,cr,uid,ids,context):
         place_obj = self.pool.get('event.place')
@@ -43,8 +43,9 @@ class HRDashboard(models.Model):
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_pta')
-        id = result and result[1] or False
-        result = act_obj.read(cr, uid, [id], context=context)[0]
+        action_id = result and result[1] or False
+        result = act_obj.read(cr, uid, [action_id], context=context)[0]
+        result['name'] = "PATHANAMTHITTA ({})".format(tvm_place_count)
         return result
 
 
@@ -56,9 +57,11 @@ class HRDashboard(models.Model):
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_kl')
-        id = result and result[1] or False
-        result = act_obj.read(cr, uid, [id], context=context)[0]
+        action_id = result and result[1] or False
+        result = act_obj.read(cr, uid, [action_id], context=context)[0]
+        result['name'] = "KOLLAM ({})".format(tvm_place_count)
         return result
+
 
     def call_al(self,cr,uid,ids,context):
         place_obj = self.pool.get('event.place')
@@ -68,8 +71,9 @@ class HRDashboard(models.Model):
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_al')
-        id = result and result[1] or False
-        result = act_obj.read(cr, uid, [id], context=context)[0]
+        action_id = result and result[1] or False
+        result = act_obj.read(cr, uid, [action_id], context=context)[0]
+        result['name'] = "ALAPPUZHA ({})".format(tvm_place_count)
         return result
 
     def call_er(self,cr,uid,ids,context):
@@ -80,8 +84,9 @@ class HRDashboard(models.Model):
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_er')
-        id = result and result[1] or False
-        result = act_obj.read(cr, uid, [id], context=context)[0]
+        action_id = result and result[1] or False
+        result = act_obj.read(cr, uid, [action_id], context=context)[0]
+        result['name'] = "ERNAKULAM ({})".format(tvm_place_count)
         return result
 
     def call_id(self,cr,uid,ids,context):
@@ -92,8 +97,9 @@ class HRDashboard(models.Model):
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_id')
-        id = result and result[1] or False
-        result = act_obj.read(cr, uid, [id], context=context)[0]
+        action_id = result and result[1] or False
+        result = act_obj.read(cr, uid, [action_id], context=context)[0]
+        result['name'] = "IDUKKI ({})".format(tvm_place_count)
         return result
 
     def call_ks(self,cr,uid,ids,context):
@@ -104,8 +110,9 @@ class HRDashboard(models.Model):
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_ks')
-        id = result and result[1] or False
-        result = act_obj.read(cr, uid, [id], context=context)[0]
+        action_id = result and result[1] or False
+        result = act_obj.read(cr, uid, [action_id], context=context)[0]
+        result['name'] = "KASARAGOD ({})".format(tvm_place_count)
         return result
 
     def call_kt(self,cr,uid,ids,context):
@@ -116,8 +123,9 @@ class HRDashboard(models.Model):
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_kt')
-        id = result and result[1] or False
-        result = act_obj.read(cr, uid, [id], context=context)[0]
+        action_id = result and result[1] or False
+        result = act_obj.read(cr, uid, [action_id], context=context)[0]
+        result['name'] = "KOTTAYAM ({})".format(tvm_place_count)
         return result
 
     def call_kz(self,cr,uid,ids,context):
@@ -128,8 +136,9 @@ class HRDashboard(models.Model):
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_kz')
-        id = result and result[1] or False
-        result = act_obj.read(cr, uid, [id], context=context)[0]
+        action_id = result and result[1] or False
+        result = act_obj.read(cr, uid, [action_id], context=context)[0]
+        result['name'] = "KOZHIKODE ({})".format(tvm_place_count)
         return result
 
     def call_ma(self,cr,uid,ids,context):
@@ -140,8 +149,9 @@ class HRDashboard(models.Model):
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_ma')
-        id = result and result[1] or False
-        result = act_obj.read(cr, uid, [id], context=context)[0]
+        action_id = result and result[1] or False
+        result = act_obj.read(cr, uid, [action_id], context=context)[0]
+        result['name'] = "MALAPPURAM ({})".format(tvm_place_count)
         return result
 
     def call_pl(self,cr,uid,ids,context):
@@ -152,8 +162,9 @@ class HRDashboard(models.Model):
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_pl')
-        id = result and result[1] or False
-        result = act_obj.read(cr, uid, [id], context=context)[0]
+        action_id = result and result[1] or False
+        result = act_obj.read(cr, uid, [action_id], context=context)[0]
+        result['name'] = "PALAKKAD ({})".format(tvm_place_count)
         return result
 
     def call_ts(self,cr,uid,ids,context):
@@ -164,10 +175,10 @@ class HRDashboard(models.Model):
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_ts')
-        id = result and result[1] or False
-        result = act_obj.read(cr, uid, [id], context=context)[0]
+        action_id = result and result[1] or False
+        result = act_obj.read(cr, uid, [action_id], context=context)[0]
+        result['name'] = "THRISSUR ({})".format(tvm_place_count)
         return result
-
     def call_wa(self,cr,uid,ids,context):
         place_obj = self.pool.get('event.place')
         places = place_obj.search(cr, uid, [('event_district', '=', 'WA')], context=context)
@@ -176,8 +187,9 @@ class HRDashboard(models.Model):
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_wa')
-        id = result and result[1] or False
-        result = act_obj.read(cr, uid, [id], context=context)[0]
+        action_id = result and result[1] or False
+        result = act_obj.read(cr, uid, [action_id], context=context)[0]
+        result['name'] = "WAYANAD ({})".format(tvm_place_count)
         return result
     
     def call_kn(self,cr,uid,ids,context):
@@ -188,8 +200,9 @@ class HRDashboard(models.Model):
         mod_obj = self.pool.get('ir.model.data')
         act_obj = self.pool.get('ir.actions.act_window')
         result = mod_obj.get_object_reference(cr, uid, 'sesa_requirement', 'action_dashboard_places_kn')
-        id = result and result[1] or False
-        result = act_obj.read(cr, uid, [id], context=context)[0]
+        action_id = result and result[1] or False
+        result = act_obj.read(cr, uid, [action_id], context=context)[0]
+        result['name'] = "KANNUR ({})".format(tvm_place_count)
         return result
 
     def call_admin(self,cr,uid,ids,context):
