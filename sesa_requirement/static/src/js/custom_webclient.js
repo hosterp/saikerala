@@ -10,11 +10,12 @@ openerp.sesa_requirement = function (instance) {
     });
 };
 $(document).ready(function () {
-    $(document).on('keydown', 'input[type="text"], textarea, .o_field_many2one input', function(event) {
+      $('.oe_form_field_radio input[type="radio"]').first().prop('checked', true);
+    $(document).on('keydown', 'input[type="text"], textarea, .o_field_many2one input,.oe_form_field_radio input[type="radio"],.oe_form_field_selection select', function(event) {
         if (event.which === 13) {
             event.preventDefault();
 
-            var inputs = $('input[type="text"], textarea, .o_field_many2one input').filter(':visible:not([readonly]):not(:disabled)');
+            var inputs = $('input[type="text"], textarea, .o_field_many2one input,.oe_form_field_radio input[type="radio"],.oe_form_field_selection select').filter(':visible:not([readonly]):not(:disabled)');
             var index = inputs.index(this);
             if (index < inputs.length - 1) {
                 inputs.eq(index + 1).focus().select();
