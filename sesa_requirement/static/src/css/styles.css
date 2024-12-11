@@ -26,10 +26,10 @@
         text-align: center;
     }
 
-body.oe_single_form {
+/*body.oe_single_form {
   background: #eee url(/sesa_requirement/static/src/img/bg.png);
   height: 100%;
-}
+}*/
 .oe_employee_picture {
     width: 122px;
     height: auto;
@@ -207,5 +207,6 @@ font-size: 16px;
     body {
     overflow: auto !important;
     }
+
 
 }
