@@ -24,10 +24,12 @@
             'views/Balvikas_details.xml',
             'views/centenary_celebration.xml',
             'views/centenary_form.xml',
+            'views/view_port.xml',
+
     ],
-    # 'css': [
-    #     "static/src/css/styles.css",
-    #     ],
+    'css': [
+        "static/src/css/styles.css",
+        ],
     'js': [
         'static/src/js/custom_webclient.js',
     ],

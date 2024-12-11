@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <template id="assets_backend" name="Custom Backend Assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+<!--                <script type="text/javascript" src="/pharmacy_mgmnt/static/src/js/widget.js"/>-->
+                <script type="text/javascript" src="/sesa_requirement/static/src/js/custom_webclient.js"/>
+                <link rel="stylesheet" href="/sesa_requirement/static/src/css/styles.css"/>
+                <link rel="manifest" href="/sesa_requirement/static/src/manifest.json"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <meta name="mobile-web-app-capable" content="yes"/>
+            </xpath>
+        </template>
+    </data>
+</openerp>

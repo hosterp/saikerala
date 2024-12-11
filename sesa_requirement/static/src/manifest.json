@@ -1,0 +1,37 @@
+{
+  "name": "Hiworth",
+  "short_name": "Hiworth",
+  "start_url": "/web#page=0&limit=80&view_type=list&model=event.event&menu_id=160&action=190",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "display_override": ["window-controls-overlay"],
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/sesa_requirement/static/src/icon-512x512.png",
+      "sizes": "225x225",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/sesa_requirement/static/src/icon-512x512.png",
+      "sizes": "225x225",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "screenshots": [
+    {
+     "src": "/sesa_requirement/static/src/icon-320x320.png",
+      "sizes": "320x320",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/sesa_requirement/static/src/icon-320x320.png",
+      "sizes": "320x320",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+}

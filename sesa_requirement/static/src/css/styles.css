@@ -59,5 +59,153 @@ font-size: 16px;
 }
 
 .openerp .oe_kanban_view .oe_kanban_group_header.oe_kanban_no_group {
-    padding: 24px;
+    padding: 0px !important;
+}
+.navbar.navbar-static-top {
+    position: static !important;
+    margin-bottom: 19px !important;
+}
+
+
+@media (max-width: 768px){
+      .o_menu_sections {
+        display: block !important;
+    }
+
+
+    .openerp .oe_searchview {
+    line-height: 18px;
+    min-width: 153px !important;
+
+}
+
+    /* Hide the hamburger button */
+    #oe_main_menu_navbar .navbar-header .navbar-toggle {
+        display: none;
+    }
+
+    /* Ensure the navbar is not sticky or fixed */
+    #oe_main_menu_navbar {
+        position: static !important;
+    }
+
+    /* Expand the navbar to show all menu items in a single line */
+    #oe_main_menu_navbar .navbar-collapse {
+        display: flex !important;
+        flex-wrap: nowrap;
+        overflow-x: auto; /* Enable horizontal scrolling if needed */
+    }
+
+    /* Keep menu items inline in a single row */
+    #oe_main_menu_navbar .nav > li {
+        display: inline-block;
+        white-space: nowrap; /* Prevent wrapping to new lines */
+    }
+
+    /* Adjust menu item spacing and appearance */
+    #oe_main_menu_navbar .nav > li > a {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+
+    .openerp .oe_view_manager table.oe_view_manager_header .oe_header_row:first-child td {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    }
+
+    #oe_main_menu_navbar .nav > li > a {
+    padding-left:5px !important;
+    padding-right:5px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    }
+
+
+    ul.nav.navbar-nav.navbar-right.oe_user_menu_placeholder {
+    padding-left: 25px !important;
+    }
+
+    ul.nav.navbar-nav.navbar-right.oe_systray {
+    padding-left: 30px !important;
+    }
+
+    /* Ensure the breadcrumb title stays in a single line on small screens */
+    .oe_view_title_text {
+        white-space: nowrap !important;  /* Prevent text from wrapping */
+        overflow: hidden;               /* Hide overflowing text if any */
+        text-overflow: ellipsis;        /* Add ellipsis (...) if the text overflows */
+    }
+
+    .oe_view_title_text .oe_breadcrumb_item {
+        display: inline-block;         /* Make breadcrumb items inline */
+        white-space: nowrap;           /* Prevent wrapping for individual items */
+    }
+
+    .navbar {
+    position: relative !important; /* Change from fixed or sticky to relative */
+    top: auto !important; /* Ensure top is not set */
+    }
+
+
+    .oe_kanban_column_cards {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: space-between; /* Distributes space between items */
+    }
+
+    .oe_fold_column {
+        flex: 1 1 calc(33.33% - 20px); /* Adjusts the width of each card */
+        margin: 10px; /* Adds spacing between cards */
+        min-width: 200px; /* Ensures a minimum width */
+    }
+
+    .openerp .oe_view_manager_current > .oe_view_manager_header .oe_header_row td {
+    padding: 0px 8px 0px 8px !important;
+    }
+
+    .openerp .oe_view_manager table.oe_view_manager_header h2 {
+    margin: 5px 0px 0px 0px !important;
+    line-height: 17px !important;
+    }
+
+    .openerp .oe_form_editable .oe_form .oe_form_field_datetime input {
+    width: 90px !important;
+    }
+
+    .openerp .oe_form .oe_form_field_with_button > div {
+    width: 120px !important;
+    }
+
+    span.oe_form_field.oe_form_field_selection {
+    width: 122px !important;
+    }
+
+    .openerp .oe_form td.oe_form_group_cell_label label {
+    min-width: 68px !important;
+    }
+
+    .openerp .oe_form .oe_form_field {
+    width: 120px !important;
+    }
+
+    .field_text {
+    width: 120px;
+    height: 30px;
+    resize: none; /* Disable manual resizing */
+    overflow: hidden; /* Hide scrollbars initially */
+    }
+
+
+    .openerp .oe_application > div > .oe_view_manager > .oe_view_manager_wrapper > div > .oe_view_manager_body {
+    overflow: visible !important;
+    }
+
+    .openerp.openerp_webclient_container {
+    overflow: visible !important;
+    }
+    body {
+    overflow: auto !important;
+}
+
 }
